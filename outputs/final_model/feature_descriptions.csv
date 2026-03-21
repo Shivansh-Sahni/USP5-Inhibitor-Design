@@ -1,0 +1,18 @@
+feature_group,feature,description
+base,mw,Molecular weight
+base,logp,logP
+base,tpsa,Topological polar surface area
+base,hbd,Hydrogen-bond donors
+base,hba,Hydrogen-bond acceptors
+base,rot,Rotatable bonds
+base,rings,Ring count
+base,hac,Heavy atom count
+base,fsp3,Fraction sp3 carbons
+graph,bertz,Bertz complexity
+graph,balaban,Balaban J index
+graph,chi0v,Valence connectivity index Chi0v
+graph,chi1v,Valence connectivity index Chi1v
+graph,chi2v,Valence connectivity index Chi2v
+graph,kappa1,Kier shape index Kappa1
+graph,kappa2,Kier shape index Kappa2
+graph,kappa3,Kier shape index Kappa3
