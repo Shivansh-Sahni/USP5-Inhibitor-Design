@@ -1,0 +1,7 @@
+stage,remaining_unique_compounds
+start_focused_library,2255
+stage1_predicted_pIC50_ge_4.60,1050
+stage2_pains_brenk_free,137
+stage3_lipinski_psa_surface_area_flexibility,92
+stage4_admet_ai_core_gates,59
+stage5_template_docking_and_3d_pharmacophore,15
