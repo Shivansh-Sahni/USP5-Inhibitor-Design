@@ -1,6 +1,13 @@
-# USP5 Inhibitor Modeling Baseline
+# USP5 Inhibitor Final Workflow
 
-This project builds a practical small-data cheminformatics workflow for USP5 inhibitor potency modeling from [`First.csv`](/Users/shivanshsahni/Documents/New%20project/data/raw/First.csv). The goal is not to force complex models onto a tiny dataset, but to establish a transparent RDKit-based baseline that supports exploratory analysis, regression, and early ranking for virtual screening.
+This project now centers on one canonical USP5 virtual screening workflow based on the saved final exploratory regression model, a broad 10-method enumeration library, and a multistage lead-selection funnel.
+
+The canonical workflow is:
+
+1. Build or reuse the saved final `ExtraTreesRegressor` potency model in [`outputs/final_model/`](/Users/shivanshsahni/Documents/New%20project/outputs/final_model).
+2. Enumerate a broad virtual library with the 10-method chemistry pipeline in [`scripts/run_enumeration_10_methods.py`](/Users/shivanshsahni/Documents/New%20project/scripts/run_enumeration_10_methods.py).
+3. Screen that broad library with the restored final-model lead funnel in [`scripts/run_lead_selection.py`](/Users/shivanshsahni/Documents/New%20project/scripts/run_lead_selection.py).
+4. Report primary leads and orthogonal backup leads from the final outputs in [`outputs/final_leads.csv`](/Users/shivanshsahni/Documents/New%20project/outputs/final_leads.csv) and [`outputs/backup_leads.csv`](/Users/shivanshsahni/Documents/New%20project/outputs/backup_leads.csv).
 
 ## Scientific framing
 
@@ -35,19 +42,21 @@ Rows with `ic50 == 0` or `ic50 == -1` are not measured IC50 values. They are lab
 
 These flags are preserved in all cleaned outputs and used in reporting.
 
-## What the workflow does
+## What the canonical workflow does
 
 1. Validates required columns and parses the dataset.
 2. Validates and canonicalizes SMILES with RDKit.
 3. Preserves row-level provenance while also generating a deduplicated modeling table by canonical SMILES.
-4. Generates RDKit descriptors and Morgan fingerprints.
-5. Computes Tanimoto similarity matrices and nearest-neighbor summaries.
-6. Runs leave-one-out cross-validation (LOOCV) with small-data baseline models:
-   - mean predictor
-   - ElasticNet
-   - RandomForestRegressor
-   - XGBoost regressor if `xgboost` is installed
-7. Saves exploratory summaries, feature tables, model metrics, LOOCV predictions, and ranked compounds.
+4. Generates RDKit physicochemical and graph descriptors.
+5. Uses the saved final `ExtraTreesRegressor` as the project-level potency model.
+6. Expands all positive training chemotypes into a broad `3264`-compound virtual library using 10 enumeration techniques.
+7. Screens that library with:
+   - `PAINS + BRENK`
+   - Lipinski-style property gates
+   - `TPSA` and molecular surface area limits
+   - `ADMET-AI`
+   - multistructure USP5 3D template-docking / pharmacophore plausibility using `6DXT`, `7MS5`, `7MS6`, and `7MS7`
+8. Produces a primary lead set plus orthogonal backup chemotypes.
 
 ## Duplicate handling policy
 
@@ -71,11 +80,16 @@ The dataset is only a few dozen compounds. That is too small for deep learning m
 - LOOCV instead of optimistic train/test splits
 - honest reporting of uncertainty and data limitations
 
-## Project layout
+## Canonical project layout
 
 - [`data/raw/First.csv`](/Users/shivanshsahni/Documents/New%20project/data/raw/First.csv): copied source dataset
 - [`outputs/raw_dataset_summary.md`](/Users/shivanshsahni/Documents/New%20project/outputs/raw_dataset_summary.md): initial summary extracted from the uploaded CSV
-- [`scripts/run_workflow.py`](/Users/shivanshsahni/Documents/New%20project/scripts/run_workflow.py): command-line entry point
+- [`outputs/final_pipeline_summary.md`](/Users/shivanshsahni/Documents/New%20project/outputs/final_pipeline_summary.md): canonical final workflow summary
+- [`scripts/run_workflow.py`](/Users/shivanshsahni/Documents/New%20project/scripts/run_workflow.py): baseline data/model workflow
+- [`scripts/run_enumeration_10_methods.py`](/Users/shivanshsahni/Documents/New%20project/scripts/run_enumeration_10_methods.py): canonical broad enumeration workflow
+- [`scripts/run_lead_selection.py`](/Users/shivanshsahni/Documents/New%20project/scripts/run_lead_selection.py): canonical final lead-selection workflow
+- [`scripts/run_lead_selection_final_model_restored.py`](/Users/shivanshsahni/Documents/New%20project/scripts/run_lead_selection_final_model_restored.py): restored final-model implementation
+- [`scripts/lead_selection_multistructure_common.py`](/Users/shivanshsahni/Documents/New%20project/scripts/lead_selection_multistructure_common.py): shared multistructure and ADMET screening helper logic
 - [`src/usp5_workflow/data.py`](/Users/shivanshsahni/Documents/New%20project/src/usp5_workflow/data.py): loading, validation, annotation, canonicalization, deduplication
 - [`src/usp5_workflow/features.py`](/Users/shivanshsahni/Documents/New%20project/src/usp5_workflow/features.py): descriptors, fingerprints, Tanimoto summaries, scaffold analysis
 - [`src/usp5_workflow/modeling.py`](/Users/shivanshsahni/Documents/New%20project/src/usp5_workflow/modeling.py): LOOCV, model construction, metrics, ranking
@@ -113,24 +127,23 @@ PYTHONPATH=src .venv/bin/python scripts/run_workflow.py \
   --random-seed 42
 ```
 
-## Main outputs
+## Canonical outputs
 
 - `annotated_rows.csv`: row-level cleaned data with label flags
 - `modeling_dataset.csv`: deduplicated per-molecule table used for training
-- `descriptor_features.csv`: descriptor matrix
-- `fingerprint_features_*.csv`: Morgan fingerprint matrices
-- `tanimoto_similarity_matrix.csv`: pairwise similarity matrix
-- `similarity_summary.csv`: per-molecule nearest-neighbor similarity summary
-- `scaffold_summary.csv`: Bemis-Murcko scaffold counts
-- `model_metrics.csv`: LOOCV metrics for each model and fingerprint size
-- `loocv_predictions.csv`: out-of-fold predictions and residuals
-- `full_fit_predictions.csv`: full-data fitted predictions for ranking support
-- `ranked_compounds.csv`: molecules ranked by the best available model
-- `analysis_summary.md`: concise interpretation of dataset quality and model limitations
+- `outputs/final_model/`: final saved regression model and report
+- `enumeration_library_10_methods.csv`: canonical broad virtual library
+- `enumeration_method_counts.csv`: library-size breakdown by method
+- `lead_selection_counts.csv`: canonical lead-selection attrition table
+- `lead_selection_strict_pool.csv`: strict multistage survivor pool
+- `lead_selection_relaxed_pool.csv`: relaxed 3D-screened pool
+- `final_leads.csv`: canonical primary leads
+- `backup_leads.csv`: canonical orthogonal backup leads
+- `analysis_summary.md`: baseline interpretation of dataset quality and model limitations
 
 ## Final selected model
 
-The current project-level final exploratory model is the raw-row `base_graph` feature set with an `ExtraTreesRegressor`, selected because it achieved an in-sample `R^2` of about `0.893` while still using interpretable RDKit-derived chemistry features.
+The canonical project-level potency model is the saved raw-row `base_graph` `ExtraTreesRegressor` in [`outputs/final_model/final_model.joblib`](/Users/shivanshsahni/Documents/New%20project/outputs/final_model/final_model.joblib), selected because it achieved an in-sample `R^2` of about `0.893` while still using interpretable RDKit-derived chemistry features.
 
 Rebuild the final report and artifacts with:
 
@@ -138,7 +151,23 @@ Rebuild the final report and artifacts with:
 MPLCONFIGDIR=.matplotlib PYTHONPATH=src .venv/bin/python scripts/build_final_model_report.py
 ```
 
-Final deliverables are written under [`outputs/final_model/`](/Users/shivanshsahni/Documents/New%20project/outputs/final_model).
+Final model deliverables are written under [`outputs/final_model/`](/Users/shivanshsahni/Documents/New%20project/outputs/final_model).
+
+## Final screening pipeline
+
+The canonical final lead-selection workflow is the restored-final-model pipeline:
+
+- potency by the saved final `ExtraTreesRegressor`
+- `PAINS + BRENK` cleanup
+- `Lipinski`, `TPSA`, molecular surface area, flexibility, and charge filters
+- `ADMET-AI`
+- multistructure USP5 ZnF-UBD 3D plausibility against `6DXT`, `7MS5`, `7MS6`, and `7MS7`
+
+The main final screening summary is in [`outputs/lead_selection_summary.md`](/Users/shivanshsahni/Documents/New%20project/outputs/lead_selection_summary.md).
+
+## Archiving policy
+
+Older exploratory scripts and generated artifacts are moved under archive folders so the top-level `outputs/` and `scripts/` directories point to the canonical final workflow rather than multiple competing variants.
 
 ## Recommended next improvement
 

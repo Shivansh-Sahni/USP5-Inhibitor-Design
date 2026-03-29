@@ -528,6 +528,7 @@ def main() -> None:
     final_pool, stages = run_pipeline(df)
     ranked = rank_candidates(final_pool)
     leads = diversity_pick(ranked, n=10, sim_ceiling=0.78, per_parent_cap=None)
+    leads = leads.sort_values(["composite_score", "pred_pIC50"], ascending=[False, False]).reset_index(drop=True)
     save_outputs(ranked, stages, leads)
 
     print("stage_counts")
