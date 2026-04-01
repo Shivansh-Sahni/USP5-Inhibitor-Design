@@ -22,6 +22,7 @@ This project now uses one canonical end-to-end computational workflow.
 - Summary: [lead_selection_summary.md](/Users/shivanshsahni/Documents/New%20project/outputs/lead_selection_summary.md)
 - Primary leads: [final_leads.csv](/Users/shivanshsahni/Documents/New%20project/outputs/final_leads.csv)
 - Backup leads: [backup_leads.csv](/Users/shivanshsahni/Documents/New%20project/outputs/backup_leads.csv)
+- Deprioritized ZnF-like pool: [deprioritized_znf_like_pool.csv](/Users/shivanshsahni/Documents/New%20project/outputs/deprioritized_znf_like_pool.csv)
 
 ## Final screening stages
 
@@ -30,11 +31,12 @@ This project now uses one canonical end-to-end computational workflow.
 - `PAINS + BRENK` free: `772`
 - Lipinski / PSA / surface area / flexibility: `59`
 - `ADMET-AI`: `24`
-- Strict multistructure USP5 3D survivors: `4`
-- Relaxed orthogonal backup pool: `5`
+- Non-ZnF and not-original novelty-filtered pool: `18`
+- Relaxed non-ZnF pool: `19`
 
 ## Final interpretation
 
-- The primary lead family is the `CHEMBL5278336` acid-sulfonamide series.
-- The orthogonal backup program is centered on `CHEMBL5410606`-derived bicyclic carbonyl chemistry plus a weaker heteroaryl-acid backup branch.
+- The primary lead set is now intentionally shifted away from the `CHEMBL5278336` ZnF-UBD-like acid-sulfonamide series.
+- The current primary leads are distributed across three orthogonal families: `CHEMBL5410606` analogs, `[9*]n1c(C)cc([16*])c1C` analogs, and `CHEMBL4129140` analogs.
+- The final ranking now rewards potency, ADMET quality, lead-like properties, and novelty relative to both the existing dataset and known ZnF-reference chemistry.
 - The folder has been cleaned so the top-level outputs point to this workflow, while older exploratory artifacts are preserved under archive folders.

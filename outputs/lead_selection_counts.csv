@@ -4,5 +4,5 @@ stage1_original_final_model_predicted_pIC50_ge_4.60,1272
 stage2_pains_brenk_free,772
 stage3_lipinski_psa_surface_area_flexibility,59
 stage4_admet_ai_multigate,24
-stage5_multistructure_template_docking_strict,4
-stage5b_multistructure_template_docking_relaxed,5
+stage5_non_znf_and_not_original,18
+stage5b_non_znf_relaxed_pool,19

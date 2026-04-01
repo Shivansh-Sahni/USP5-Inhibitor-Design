@@ -597,11 +597,18 @@ def run_multistructure_scoring(df: pd.DataFrame) -> pd.DataFrame:
     return df.merge(pd.DataFrame(rows), on="product_smiles", how="left")
 
 
-def select_portfolio(df: pd.DataFrame, n: int, dominant_scaffold_cap: int | None = None, exclude_smiles: set[str] | None = None) -> pd.DataFrame:
+def select_portfolio(
+    df: pd.DataFrame,
+    n: int,
+    dominant_scaffold_cap: int | None = None,
+    exclude_smiles: set[str] | None = None,
+    parent_cap: int | None = None,
+) -> pd.DataFrame:
     exclude_smiles = exclude_smiles or set()
     selected = []
     selected_fps = []
     scaffold_counts: dict[str, int] = {}
+    parent_counts: dict[str, int] = {}
     if dominant_scaffold_cap is not None and not df.empty:
         dominant_scaffold = df["scaffold"].mode().iat[0]
     else:
@@ -612,11 +619,14 @@ def select_portfolio(df: pd.DataFrame, n: int, dominant_scaffold_cap: int | None
             continue
         if dominant_scaffold is not None and row.scaffold == dominant_scaffold and scaffold_counts.get(row.scaffold, 0) >= dominant_scaffold_cap:
             continue
+        if parent_cap is not None and parent_counts.get(row.primary_parent_id, 0) >= parent_cap:
+            continue
         max_sim = max((DataStructs.TanimotoSimilarity(row.fp, fp) for fp in selected_fps), default=0.0)
         if len(selected) < 3 or max_sim < 0.78 or row.scaffold not in scaffold_counts:
             selected.append(row)
             selected_fps.append(row.fp)
             scaffold_counts[row.scaffold] = scaffold_counts.get(row.scaffold, 0) + 1
+            parent_counts[row.primary_parent_id] = parent_counts.get(row.primary_parent_id, 0) + 1
         if len(selected) >= n:
             break
 
@@ -627,8 +637,11 @@ def select_portfolio(df: pd.DataFrame, n: int, dominant_scaffold_cap: int | None
                 continue
             if dominant_scaffold is not None and row.scaffold == dominant_scaffold and scaffold_counts.get(row.scaffold, 0) >= dominant_scaffold_cap:
                 continue
+            if parent_cap is not None and parent_counts.get(row.primary_parent_id, 0) >= parent_cap:
+                continue
             selected.append(row)
             scaffold_counts[row.scaffold] = scaffold_counts.get(row.scaffold, 0) + 1
+            parent_counts[row.primary_parent_id] = parent_counts.get(row.primary_parent_id, 0) + 1
             if len(selected) >= n:
                 break
     return pd.DataFrame(selected)

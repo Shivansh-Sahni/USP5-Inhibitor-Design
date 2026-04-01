@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "outputs"
 FINAL_MODEL_DIR = OUTPUT_DIR / "final_model"
 REPORT_PATH = OUTPUT_DIR / "usp5_project_report_for_mentor.docx"
+DATED_REPORT_PATH = OUTPUT_DIR / f"{date.today().strftime('%m-%d-%Y')} Project Report.docx"
 
 
 def add_hyperlink(paragraph, url: str, text: str) -> None:
@@ -77,6 +78,7 @@ def build_report() -> None:
 
     final_leads = pd.read_csv(OUTPUT_DIR / "final_leads.csv")
     backup_leads = pd.read_csv(OUTPUT_DIR / "backup_leads.csv")
+    deprioritized_znf = pd.read_csv(OUTPUT_DIR / "deprioritized_znf_like_pool.csv")
     enum_counts = pd.read_csv(OUTPUT_DIR / "enumeration_method_counts.csv")
     lead_counts = pd.read_csv(OUTPUT_DIR / "lead_selection_counts.csv")
     modeling_df = pd.read_csv(OUTPUT_DIR / "modeling_dataset.csv")
@@ -104,7 +106,8 @@ def build_report() -> None:
             "The project now has one canonical computational pipeline built around a saved ExtraTrees regression model, a broad 10-method enumeration library, and a multistage lead-selection funnel.",
             "The final saved potency model achieved in-sample R^2 = 0.893 on the current row-level USP5 dataset and remains the project-level potency engine.",
             "The broad enumeration workflow produced 3264 unique virtual compounds from the positive training chemistry space.",
-            "The final screening pipeline narrowed 3274 total structures (broad enumeration plus original positives) to 4 strict primary leads and 5 orthogonal backup leads.",
+            "The final screening pipeline narrowed 3274 total structures (broad enumeration plus original positives) to a 6-compound non-ZnF primary set and 4 additional orthogonal backups.",
+            "The primary-lead logic was intentionally changed so the final list no longer favors the ZnF-UBD-like CHEMBL5278336 series and instead rewards novelty relative to both the existing dataset and known ZnF-reference chemistry.",
             "Most computational cheminformatics work is complete; the main remaining tasks before paper writing are figure assembly, polished results framing, and ideally experimental validation planning.",
         ],
     )
@@ -181,7 +184,7 @@ def build_report() -> None:
 
     doc.add_paragraph(style="Heading 1").add_run("Final Lead Selection Workflow")
     doc.add_paragraph(
-        "The canonical lead-selection workflow restores the saved final ExtraTrees model as the sole potency engine, then applies property filtering, ADMET-AI, and multistructure USP5 3D template-docking / pharmacophore plausibility."
+        "The canonical lead-selection workflow restores the saved final ExtraTrees model as the sole potency engine, then applies property filtering, ADMET-AI, and a final novelty-driven prioritization step that explicitly deprioritizes ZnF-UBD-like chemistry."
     )
     add_bullets(
         doc,
@@ -189,8 +192,8 @@ def build_report() -> None:
             "Canonical screening script: scripts/run_lead_selection.py",
             "Property filters include Lipinski-style limits, TPSA, molecular surface area, flexibility, and charge sanity.",
             "ADMET stage uses ADMET-AI with AMES, hERG, ClinTox, HIA, oral bioavailability, permeability, and solubility-related outputs.",
-            "3D structural evidence uses USP5 ZnF-UBD co-crystal structures 6DXT, 7MS5, 7MS6, and 7MS7.",
-            "The final output is split into primary leads and orthogonal backup leads to avoid overclaiming a single chemotype as the only viable program.",
+            "The final prioritization stage now penalizes similarity to known ZnF-reference ligands and filters out original known molecules from the primary-lead set.",
+            "The final output is split into a non-ZnF primary set, orthogonal backups, and a separately saved deprioritized ZnF-like pool.",
         ],
     )
     add_table(doc, lead_counts.rename(columns={"remaining_unique_compounds": "count"}), title="Lead Selection Funnel")
@@ -204,7 +207,9 @@ def build_report() -> None:
             "pred_ic50_uM",
             "AMES",
             "hERG",
-            "best_binding_score",
+            "max_similarity_to_existing",
+            "max_similarity_to_znf_reference",
+            "orthogonal_composite_score",
             "scaffold",
         ]
     ].copy()
@@ -218,18 +223,37 @@ def build_report() -> None:
             "pred_pIC50",
             "AMES",
             "hERG",
-            "best_binding_score",
+            "max_similarity_to_existing",
+            "max_similarity_to_znf_reference",
+            "orthogonal_composite_score",
             "scaffold",
         ]
     ].copy()
     add_table(doc, backup_display, title="Canonical Backup Lead Set")
 
+    doc.add_paragraph(style="Heading 1").add_run("Deprioritized ZnF-Like Pool")
+    doc.add_paragraph(
+        "The compounds below still score well on potency and basic developability, but they are intentionally removed from the primary program because they are too close to the previously favored ZnF-UBD-like chemistry."
+    )
+    znf_display = deprioritized_znf[
+        [
+            "product_smiles",
+            "primary_parent_id",
+            "pred_pIC50",
+            "max_similarity_to_existing",
+            "max_similarity_to_znf_reference",
+            "orthogonal_composite_score",
+        ]
+    ].copy()
+    add_table(doc, znf_display.head(6), title="Deprioritized ZnF-Like Examples")
+
     doc.add_paragraph(style="Heading 1").add_run("Interpretation of Current Results")
     add_bullets(
         doc,
         [
-            "The strict primary lead evidence remains concentrated in the CHEMBL5278336 acid-sulfonamide family.",
-            "The backup program retains orthogonal chemistry, especially CHEMBL5410606-derived bicyclic carbonyl analogs and a weaker heteroaryl-acid branch.",
+            "The primary lead set is no longer concentrated in the CHEMBL5278336 ZnF-UBD-like acid-sulfonamide family.",
+            "The current primary program is distributed across CHEMBL5410606-derived bicyclic carbonyl analogs, a compact heteroaryl-acid branch, and CHEMBL4129140-derived cyclic diketone analogs.",
+            "This makes the project story more orthogonal and less dependent on a mechanism your mentor specifically wanted deprioritized.",
             "The project now has a consistent folder structure and a single final pipeline rather than multiple competing screening variants.",
             "From a project-management standpoint, most of the computational chemistry work is now done.",
         ],
@@ -241,9 +265,9 @@ def build_report() -> None:
         [
             "The final model is exploratory and small-data; strong prospective claims should be avoided.",
             "The final model performance reported here is in-sample rather than a large prospective benchmark.",
-            "The 3D stage is a multistructure template-docking / pharmacophore surrogate, not a full production docking plus MD validation campaign.",
             "All lead calls remain computational priorities until experimentally tested.",
             "The dataset includes assigned labels in addition to measured values, which should be acknowledged in any presentation or manuscript.",
+            "Novelty filtering is useful for strategic triage, but it does not itself prove biological relevance.",
         ],
     )
 
@@ -257,8 +281,8 @@ def build_report() -> None:
             "Final exploratory USP5 potency model selection and report generation",
             "Broad 10-method combinatorial enumeration",
             "ADMET-AI integration",
-            "Multistructure USP5 3D screening against experimentally determined co-crystal structures",
-            "Primary and orthogonal backup lead prioritization",
+            "Non-ZnF novelty-aware lead reprioritization against existing and ZnF-reference chemistry",
+            "Primary, orthogonal backup, and deprioritized ZnF-like lead partitioning",
             "Project-folder cleanup and canonical final pipeline consolidation",
         ],
     )
@@ -283,6 +307,7 @@ def build_report() -> None:
         OUTPUT_DIR / "lead_selection_summary.md",
         OUTPUT_DIR / "final_leads.csv",
         OUTPUT_DIR / "backup_leads.csv",
+        OUTPUT_DIR / "deprioritized_znf_like_pool.csv",
         OUTPUT_DIR / "enumeration_library_10_methods.csv",
         FINAL_MODEL_DIR / "final_model_report.md",
     ]:
@@ -301,7 +326,9 @@ def build_report() -> None:
     doc.add_paragraph(model_report[:2500])
 
     doc.save(REPORT_PATH)
+    doc.save(DATED_REPORT_PATH)
     print(REPORT_PATH)
+    print(DATED_REPORT_PATH)
 
 
 if __name__ == "__main__":
