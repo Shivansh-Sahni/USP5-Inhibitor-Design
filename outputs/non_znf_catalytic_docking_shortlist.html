@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Non-ZnF Catalytic Docking Shortlist</title>
+  <style>
+    body { font-family: Helvetica, Arial, sans-serif; margin: 32px; line-height: 1.35; }
+    h1, h2 { color: #1f3c5b; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0 24px; font-size: 11px; }
+    th, td { border: 1px solid #999; padding: 6px; vertical-align: top; }
+    th { background: #eef3f8; text-align: left; }
+    code { font-family: Menlo, Consolas, monospace; font-size: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Non-ZnF Catalytic Docking Shortlist</h1>
+  <p>This shortlist was extracted from <code>outputs/lead_selection_relaxed_pool.csv</code> for a catalytic-pocket docking campaign against USP5 where the zinc-finger hypothesis is intentionally excluded.</p>
+
+  <p>Ranking logic:</p>
+  <ul>
+    <li>prioritize higher <code>orthogonal_composite_score</code></li>
+    <li>prefer lower <code>max_similarity_to_znf_reference</code></li>
+    <li>keep predicted potency as a secondary tiebreaker</li>
+  </ul>
+
+  <p>Interpretation:</p>
+  <ul>
+    <li><code>strict</code>: lower ZnF-reference similarity (<code>&lt;= 0.225</code>)</li>
+    <li><code>borderline</code>: still potentially useful for catalytic-pocket docking, but less cleanly separated from ZnF-like chemistry</li>
+  </ul>
+
+  <h2>Recommended First-Pass Docking Set</h2>
+  <ol>
+    <li><code>COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cccc2c1=O</code></li>
+    <li><code>COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(F)cccc2c1=O</code></li>
+    <li><code>Cc1cc(-n2c(C)cc(CCC(=O)O)c2C)c(C)n1CCC(=O)O</code></li>
+    <li><code>Cc1cc(-c2cc(C)n(CCC(=O)O)c2C)c(C)n1CCC(=O)O</code></li>
+    <li><code>CC(=O)C1=C(O)C(=O)N(c2ccc(O)cc2)C1c1ccc(Cl)cc1</code></li>
+    <li><code>CC(=O)C1=C(O)C(=O)N(c2ccc(F)cc2)C1c1ccc(Cl)cc1</code></li>
+    <li><code>COC1C(C(C)=O)=C(O)C(=O)N1C1C(C(C)=O)=C(O)C(=O)N1c1ccccc1</code></li>
+    <li><code>COC1C(C(C)=O)=C(O)C(=O)N1C1C(C(C)=O)=C(O)C(=O)N1c1ccc(F)cc1</code></li>
+    <li><code>CC(=O)C1=C(O)C(=O)N(c2ccc(Cl)cc2)C1N1CCCC1</code></li>
+    <li><code>O=C(O)CCc1ccccc1-c1ccccc1N1CCC(O)CC1</code></li>
+  </ol>
+
+  <p>This set keeps multiple chemotypes instead of overloading one series.</p>
+
+  <h2>Strict Shortlist</h2>
+  <table>
+    <tr>
+      <th>Rank</th>
+      <th>Product SMILES</th>
+      <th>Parent</th>
+      <th>Orthogonal score</th>
+      <th>Max sim to ZnF ref</th>
+      <th>Pred pIC50</th>
+      <th>Scaffold</th>
+    </tr>
+    <tr><td>1</td><td><code>COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cccc2c1=O</code></td><td><code>CHEMBL5410606</code></td><td>0.7123</td><td>0.1868</td><td>5.1000</td><td><code>O=C(Cn1cnc2ccccc2c1=O)NCc1ccccc1</code></td></tr>
+    <tr><td>2</td><td><code>COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(F)cccc2c1=O</code></td><td><code>CHEMBL5410606</code></td><td>0.6542</td><td>0.2022</td><td>5.0192</td><td><code>O=C(Cn1cnc2ccccc2c1=O)NCc1ccccc1</code></td></tr>
+    <tr><td>3</td><td><code>Cc1cc(-n2c(C)cc(CCC(=O)O)c2C)c(C)n1CCC(=O)O</code></td><td><code>[9*]n1c(C)cc([16*])c1C</code></td><td>0.6082</td><td>0.1857</td><td>4.8758</td><td><code>c1ccn(-c2cc[nH]c2)c1</code></td></tr>
+    <tr><td>4</td><td><code>Cc1cc(-c2cc(C)n(CCC(=O)O)c2C)c(C)n1CCC(=O)O</code></td><td><code>[9*]n1c(C)cc([16*])c1C</code></td><td>0.5901</td><td>0.2167</td><td>4.8743</td><td><code>c1cc(-c2cc[nH]c2)c[nH]1</code></td></tr>
+    <tr><td>5</td><td><code>COc1ccncc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cccc2c1=O</code></td><td><code>CHEMBL5410606</code></td><td>0.5724</td><td>0.1915</td><td>4.8761</td><td><code>O=C(Cn1cnc2ccccc2c1=O)NCc1cccnc1</code></td></tr>
+    <tr><td>6</td><td><code>COc1ncccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cccc2c1=O</code></td><td><code>CHEMBL5410606</code></td><td>0.5719</td><td>0.1957</td><td>4.8761</td><td><code>O=C(Cn1cnc2ccccc2c1=O)NCc1cccnc1</code></td></tr>
+    <tr><td>7</td><td><code>COc1cccnc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cccc2c1=O</code></td><td><code>CHEMBL5410606</code></td><td>0.5719</td><td>0.1935</td><td>4.8761</td><td><code>O=C(Cn1cnc2ccccc2c1=O)NCc1ccccn1</code></td></tr>
+    <tr><td>8</td><td><code>COc1cnccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cccc2c1=O</code></td><td><code>CHEMBL5410606</code></td><td>0.5594</td><td>0.1915</td><td>4.8761</td><td><code>O=C(Cn1cnc2ccccc2c1=O)NCc1ccncc1</code></td></tr>
+    <tr><td>9</td><td><code>COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cncc2c1=O</code></td><td><code>CHEMBL5410606</code></td><td>0.5564</td><td>0.1957</td><td>4.8769</td><td><code>O=C(Cn1cnc2ccncc2c1=O)NCc1ccccc1</code></td></tr>
+    <tr><td>10</td><td><code>CC(=O)C1=C(O)C(=O)N(c2ccc(O)cc2)C1c1ccc(Cl)cc1</code></td><td><code>CHEMBL4129140</code></td><td>0.5313</td><td>0.2254</td><td>4.8777</td><td><code>O=C1C=CC(c2ccccc2)N1c1ccccc1</code></td></tr>
+    <tr><td>11</td><td><code>COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)ccnc2c1=O</code></td><td><code>CHEMBL5410606</code></td><td>0.5256</td><td>0.1978</td><td>4.8761</td><td><code>O=C(Cn1cnc2cccnc2c1=O)NCc1ccccc1</code></td></tr>
+    <tr><td>12</td><td><code>CC(=O)C1=C(O)C(=O)N(c2ccc(F)cc2)C1c1ccc(Cl)cc1</code></td><td><code>CHEMBL4129140</code></td><td>0.5054</td><td>0.2192</td><td>4.8347</td><td><code>O=C1C=CC(c2ccccc2)N1c1ccccc1</code></td></tr>
+    <tr><td>13</td><td><code>CC(=O)C1=C(O)C(=O)N(c2ccc(Cl)cc2)C1N1CCCC1</code></td><td><code>CHEMBL4129140</code></td><td>0.4226</td><td>0.2055</td><td>4.7226</td><td><code>O=C1C=CC(N2CCCC2)N1c1ccccc1</code></td></tr>
+    <tr><td>14</td><td><code>COC1C(C(C)=O)=C(O)C(=O)N1C1C(C(C)=O)=C(O)C(=O)N1c1ccccc1</code></td><td><code>CHEMBL4129140</code></td><td>0.4211</td><td>0.1447</td><td>4.6387</td><td><code>O=C1C=CCN1C1C=CC(=O)N1c1ccccc1</code></td></tr>
+    <tr><td>15</td><td><code>COC1C(C(C)=O)=C(O)C(=O)N1C1C(C(C)=O)=C(O)C(=O)N1c1ccc(F)cc1</code></td><td><code>CHEMBL4129140</code></td><td>0.4187</td><td>0.1392</td><td>4.6140</td><td><code>O=C1C=CCN1C1C=CC(=O)N1c1ccccc1</code></td></tr>
+  </table>
+
+  <h2>Borderline Additions</h2>
+  <p>These are the next candidates if you want to push toward a fuller set.</p>
+  <table>
+    <tr>
+      <th>Rank</th>
+      <th>Product SMILES</th>
+      <th>Parent</th>
+      <th>Orthogonal score</th>
+      <th>Max sim to ZnF ref</th>
+      <th>Pred pIC50</th>
+    </tr>
+    <tr><td>16</td><td><code>CC(=O)C1=C(O)C(=O)N([C@@H]2CCNC[C@@H]2C)C1c1ccc(Cl)cc1</code></td><td><code>CHEMBL4129140</code></td><td>0.4388</td><td>0.2308</td><td>4.7192</td></tr>
+    <tr><td>17</td><td><code>O=C(O)CCc1ccccc1-c1ccccc1N1CCC(O)CC1</code></td><td><code>CHEMBL5410606</code></td><td>0.5254</td><td>0.2319</td><td>4.7378</td></tr>
+    <tr><td>18</td><td><code>CC(=O)C1=C(O)C(=O)N(c2ccccc2)C1c1ccc(Cl)cc1</code></td><td><code>CHEMBL4129140</code></td><td>0.5152</td><td>0.2429</td><td>4.8639</td></tr>
+    <tr><td>19</td><td><code>CC(=O)C1=C(O)C(=O)N(CCC(=O)O)C1c1ccc(Cl)cc1</code></td><td><code>CHEMBL4129140</code></td><td>0.5543</td><td>0.2571</td><td>4.9085</td></tr>
+  </table>
+
+  <p>Only 19 molecules in the current relaxed survivor pool were available for this non-ZnF-oriented ranking. There is no 20th candidate without relaxing the filter further.</p>
+</body>
+</html>

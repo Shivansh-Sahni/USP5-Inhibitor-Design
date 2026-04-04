@@ -1,0 +1,11 @@
+name,smiles,score
+cmpd_1,COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(F)cccc2c1=O,-6.1
+cmpd_2,COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(F)cccc2c1=O,-6.1
+cmpd_3,COc1ccncc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cccc2c1=O,-6.0
+cmpd_4,Cc1cc(-c2cc(C)n(CCC(=O)O)c2C)c(C)n1CCC(=O)O,-5.6
+cmpd_5,CC(=O)C1=C(O)C(=O)N(CCC(=O)O)C1c1ccc(Cl)cc1,-5.1
+cmpd_6,CC(=O)C1=C(O)C(=O)N(c2ccc(O)cc2)C1c1ccc(Cl)cc1,-5.9
+cmpd_7,COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cccc2c1=O,-6.1
+cmpd_8,COc1ncccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(Cl)cccc2c1=O,-6.2
+cmpd_9,CC(=O)C1=C(O)C(=O)N(c2ccccc2)C1c1ccc(Cl)cc1,-6.3
+cmpd_10,CC(=O)C1=C(O)C(=O)N(c2ccc(F)cc2)C1c1ccc(Cl)cc1,-5.7

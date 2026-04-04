@@ -1,0 +1,2514 @@
+Last login: Wed Apr  1 16:14:13 on ttys000
+(base) shivanshsahni@Mac ~ % cd Downloads 
+(base) shivanshsahni@Mac Downloads % obabel -:"COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(F)cccc2c1=O" -O ligand.pdb --gen3d
+1 molecule converted
+(base) shivanshsahni@Mac Downloads % obabel ligand.pdb -O ligand.pdbqt
+1 molecule converted
+(base) shivanshsahni@Mac Downloads % adt
+zsh: command not found: adt
+(base) shivanshsahni@Mac Downloads % cd /Applications/MGLToolsPckgs/bin
+./adt
+cd: no such file or directory: /Applications/MGLToolsPckgs/bin
+zsh: no such file or directory: ./adt
+(base) shivanshsahni@Mac Downloads % cd ~
+(base) shivanshsahni@Mac ~ % cd /Applications/MGLToolsPckgs/bin
+./adt
+cd: no such file or directory: /Applications/MGLToolsPckgs/bin
+zsh: no such file or directory: ./adt
+(base) shivanshsahni@Mac ~ % cd Applications 
+(base) shivanshsahni@Mac Applications % ls 
+Autodesk Fusion Service Utility.app	Chrome Apps.localized
+Autodesk Fusion.app			Remove Autodesk Fusion.app
+(base) shivanshsahni@Mac Applications % cd ~/Downloads/mgltools-1.5
+chmod +x mgltools-1.5.7-MacOS-X-Install
+./mgltools-1.5.7-MacOS-X-Install
+cd: no such file or directory: /Users/shivanshsahni/Downloads/mgltools-1.5
+chmod: mgltools-1.5.7-MacOS-X-Install: No such file or directory
+zsh: no such file or directory: ./mgltools-1.5.7-MacOS-X-Install
+(base) shivanshsahni@Mac Applications % xattr -d com.apple.quarantine ~/Downloads/mgltools-1.5.7-MacOS-X-Install.dmg
+(base) shivanshsahni@Mac Applications % xattr -d com.apple.quarantine /Volumes/mgltools-1.5.7-MacOS-X-Install/mgltools-1.5.7-MacOS-X-Install
+xattr: No such file: /Volumes/mgltools-1.5.7-MacOS-X-Install/mgltools-1.5.7-MacOS-X-Install
+(base) shivanshsahni@Mac Applications % cd ~/Downloads 
+(base) shivanshsahni@Mac Downloads % hdiutil attach ~/Downloads/mgltools-1.5.7-MacOS-X-Install.dmg
+Checksumming Protective Master Boot Record (MBR : 0)…
+Protective Master Boot Record (MBR :: verified   CRC32 $9D5942C6
+Checksumming GPT Header (Primary GPT Header : 1)…
+ GPT Header (Primary GPT Header : 1): verified   CRC32 $27C49494
+Checksumming GPT Partition Data (Primary GPT Table : 2)…
+GPT Partition Data (Primary GPT Tabl: verified   CRC32 $58AEE311
+Checksumming  (Apple_Free : 3)…
+                    (Apple_Free : 3): verified   CRC32 $00000000
+Checksumming disk image (Apple_HFS : 4)…
+.....................................................................................................................................................................
+          disk image (Apple_HFS : 4): verified   CRC32 $A847821B
+Checksumming  (Apple_Free : 5)…
+                    (Apple_Free : 5): verified   CRC32 $00000000
+Checksumming GPT Partition Data (Backup GPT Table : 6)…
+GPT Partition Data (Backup GPT Table: verified   CRC32 $58AEE311
+Checksumming GPT Header (Backup GPT Header : 7)…
+  GPT Header (Backup GPT Header : 7): verified   CRC32 $EC7F81B3
+verified   CRC32 $F4F87ED6
+/dev/disk7          	GUID_partition_scheme          	
+/dev/disk7s1        	Apple_HFS                      	/Volumes/mgltools-1.5 2
+(base) shivanshsahni@Mac Downloads % ls /Volumes
+Macintosh HD				mgltools-1.5 1				PyMOL-3.1.8_0-MacOS-x86-64-py310
+mgltools-1.5				mgltools-1.5 2
+(base) shivanshsahni@Mac Downloads % xattr -dr com.apple.quarantine /Volumes/mgltools-1.5.7-MacOS-X-Install
+xattr: No such file: /Volumes/mgltools-1.5.7-MacOS-X-Install
+(base) shivanshsahni@Mac Downloads % cd /Volumes/mgltools-1.5.7-MacOS-X-Install
+chmod +x mgltools-1.5.7-MacOS-X-Install
+./mgltools-1.5.7-MacOS-X-Install
+cd: no such file or directory: /Volumes/mgltools-1.5.7-MacOS-X-Install
+chmod: mgltools-1.5.7-MacOS-X-Install: No such file or directory
+zsh: no such file or directory: ./mgltools-1.5.7-MacOS-X-Install
+(base) shivanshsahni@Mac Downloads % ls /Applications
+Adobe Acrobat DC			GlobalProtect.app			Microsoft PowerPoint.app		SchrodingerSuites2025-2
+Antigravity.app				Google Chrome.app			Microsoft Teams.app			SchrodingerSuites2025-3
+BAND.app				Grammarly Desktop.app			Microsoft Word.app			Sublime Text.app
+Bluebook.app				Henry Ford Genesys Health Club.app	Numbers.app				Utilities
+ChatGPT Atlas.app			iMovie.app				OBS.app					Vernier Graphical Analysis.app
+ChemDraw.app				Inkscape.app				OneDrive.app				Vernier Spectral Analysis.app
+Chess.app				Keynote.app				OptiMetro.app				Visual Studio Code.app
+Codex.app				KNIME 5.4.4.app				Orchids.app				WhatsApp.app
+ConcordeTSP.app				LockDown Browser.app			Pages.app				Xcode.app
+Cursor.app				Microsoft Defender Shim.app		PyMOL.app				zoom.us.app
+Developer.app				Microsoft Excel.app			Python 3.12				Zotero.app
+FileZilla.app				Microsoft OneNote.app			Python 3.13
+GeForceNOW.app				Microsoft Outlook.app			Safari.app
+(base) shivanshsahni@Mac Downloads % cd "/Volumes/mgltools-1.5 2"
+(base) shivanshsahni@Mac mgltools-1.5 2 % ls
+mgltools-1.5.7-MacOS-X-Install.app
+(base) shivanshsahni@Mac mgltools-1.5 2 % xattr -dr com.apple.quarantine .
+xattr: [Errno 13] Permission denied: './.Trashes'
+xattr: [Errno 30] Read-only file system: './mgltools-1.5.7-MacOS-X-Install.app/Contents/Info.plist'
+xattr: [Errno 30] Read-only file system: './mgltools-1.5.7-MacOS-X-Install.app/Contents/MacOS/installer'
+xattr: [Errno 30] Read-only file system: './mgltools-1.5.7-MacOS-X-Install.app/Contents/MacOS'
+xattr: [Errno 30] Read-only file system: './mgltools-1.5.7-MacOS-X-Install.app/Contents'
+xattr: [Errno 30] Read-only file system: './mgltools-1.5.7-MacOS-X-Install.app'
+xattr: [Errno 30] Read-only file system: '.'
+(base) shivanshsahni@Mac mgltools-1.5 2 % chmod +x mgltools-1.5.7-MacOS-X-Install
+chmod: mgltools-1.5.7-MacOS-X-Install: No such file or directory
+(base) shivanshsahni@Mac mgltools-1.5 2 % chmod +x mgltools-1.5.7-MacOS-X-Install.app
+(base) shivanshsahni@Mac mgltools-1.5 2 % ./mgltools-1.5.7-MacOS-X-Install.app
+zsh: permission denied: ./mgltools-1.5.7-MacOS-X-Install.app
+(base) shivanshsahni@Mac mgltools-1.5 2 % cp -r "/Volumes/mgltools-1.5 2/mgltools-1.5.7-MacOS-X-Install.app" ~/Downloads/
+(base) shivanshsahni@Mac mgltools-1.5 2 % cd ~/Downloads
+(base) shivanshsahni@Mac Downloads % xattr -dr com.apple.quarantine mgltools-1.5.7-MacOS-X-Install.app
+(base) shivanshsahni@Mac Downloads % open mgltools-1.5.7-MacOS-X-Install.app
+(base) shivanshsahni@Mac Downloads % open mgltools-1.5.7-MacOS-X-Install.app
+(base) shivanshsahni@Mac Downloads % cd mgltools-1.5.7-MacOS-X-Install.app/Contents/MacOS
+chmod +x installer
+./installer
+invalid command name "bind"
+    while executing
+"::unknown bind Text <Tab>"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 $next $args"
+    (procedure "::obj::Unknown" line 3)
+    invoked from within
+"bind Text <Tab>"
+    (procedure "::InstallJammer::InitializeGui" line 12)
+    invoked from within
+"::InstallJammer::InitializeGui "
+    (procedure "::InstallJammer::InitInstall" line 68)
+    invoked from within
+"::InstallJammer::InitInstall"
+    (file "/installkitvfs/main.tcl" line 34667)
+(base) shivanshsahni@Mac MacOS % ls /Applications
+Adobe Acrobat DC			GlobalProtect.app			Microsoft PowerPoint.app		SchrodingerSuites2025-2
+Antigravity.app				Google Chrome.app			Microsoft Teams.app			SchrodingerSuites2025-3
+BAND.app				Grammarly Desktop.app			Microsoft Word.app			Sublime Text.app
+Bluebook.app				Henry Ford Genesys Health Club.app	Numbers.app				Utilities
+ChatGPT Atlas.app			iMovie.app				OBS.app					Vernier Graphical Analysis.app
+ChemDraw.app				Inkscape.app				OneDrive.app				Vernier Spectral Analysis.app
+Chess.app				Keynote.app				OptiMetro.app				Visual Studio Code.app
+Codex.app				KNIME 5.4.4.app				Orchids.app				WhatsApp.app
+ConcordeTSP.app				LockDown Browser.app			Pages.app				Xcode.app
+Cursor.app				Microsoft Defender Shim.app		PyMOL.app				zoom.us.app
+Developer.app				Microsoft Excel.app			Python 3.12				Zotero.app
+FileZilla.app				Microsoft OneNote.app			Python 3.13
+GeForceNOW.app				Microsoft Outlook.app			Safari.app
+(base) shivanshsahni@Mac MacOS % cd ~/Downloads
+tar -xzf mgltools_1.5.7_MacOS-X.tar.gz
+ls
+tar: Error opening archive: Failed to open 'mgltools_1.5.7_MacOS-X.tar.gz'
+04-01-2026-01.txt			mgltools_1.5.7_MacOS-X			Personal				Wang
+2025-2026				mgltools_1.5.7_MacOS-X.tar_.gz		protein_clean.pdb
+3IHP.pdb				mgltools-1.5.7-MacOS-X-Install.app	SEFMD 2026
+CV.pdf					mgltools-1.5.7-MacOS-X-Install.dmg	USP5 Inhibitor Project
+(base) shivanshsahni@Mac Downloads % cd ~/Downloads/mgltools_1.5.7_MacOS-X
+(base) shivanshsahni@Mac mgltools_1.5.7_MacOS-X % chmod +x install.sh
+(base) shivanshsahni@Mac mgltools_1.5.7_MacOS-X % ./install.sh
+Installing MGLTools to /Users/shivanshsahni/Downloads/mgltools_1.5.7_MacOS-X
+Installing Python Interpreter to 
+x bin/
+x bin/2to3
+x bin/evol
+x bin/f2py
+x bin/idle
+x bin/ipcluster
+x bin/ipcluster2
+x bin/ipcontroller
+x bin/ipcontroller2
+x bin/ipengine
+x bin/ipengine2
+x bin/iptest
+x bin/iptest2
+x bin/ipython
+x bin/ipython2
+x bin/pilconvert.py
+x bin/pildriver.py
+x bin/pilfile.py
+x bin/pilfont.py
+x bin/pilprint.py
+x bin/pkg-config
+x bin/prody
+x bin/pydoc
+x bin/pygmentize
+x bin/python
+x bin/python-config
+x bin/python2
+x bin/python2-config
+x bin/python2.7
+x bin/python2.7-config
+x bin/smtpd.py
+x include/
+x include/freetype/
+x include/ft2build.h
+x include/png.h
+x include/pngconf.h
+x include/python2.7/
+x include/tcl.h
+x include/tclDecls.h
+x include/tclPlatDecls.h
+x include/tk.h
+x include/tkDecls.h
+x include/tkPlatDecls.h
+x include/python2.7/abstract.h
+x include/python2.7/asdl.h
+x include/python2.7/ast.h
+x include/python2.7/bitset.h
+x include/python2.7/boolobject.h
+x include/python2.7/bufferobject.h
+x include/python2.7/bytearrayobject.h
+x include/python2.7/bytes_methods.h
+x include/python2.7/bytesobject.h
+x include/python2.7/cellobject.h
+x include/python2.7/ceval.h
+x include/python2.7/classobject.h
+x include/python2.7/cobject.h
+x include/python2.7/code.h
+x include/python2.7/codecs.h
+x include/python2.7/compile.h
+x include/python2.7/complexobject.h
+x include/python2.7/cStringIO.h
+x include/python2.7/datetime.h
+x include/python2.7/descrobject.h
+x include/python2.7/dictobject.h
+x include/python2.7/dtoa.h
+x include/python2.7/enumobject.h
+x include/python2.7/errcode.h
+x include/python2.7/eval.h
+x include/python2.7/fileobject.h
+x include/python2.7/floatobject.h
+x include/python2.7/frameobject.h
+x include/python2.7/funcobject.h
+x include/python2.7/genobject.h
+x include/python2.7/graminit.h
+x include/python2.7/grammar.h
+x include/python2.7/import.h
+x include/python2.7/intobject.h
+x include/python2.7/intrcheck.h
+x include/python2.7/iterobject.h
+x include/python2.7/listobject.h
+x include/python2.7/longintrepr.h
+x include/python2.7/longobject.h
+x include/python2.7/marshal.h
+x include/python2.7/memoryobject.h
+x include/python2.7/metagrammar.h
+x include/python2.7/methodobject.h
+x include/python2.7/modsupport.h
+x include/python2.7/moduleobject.h
+x include/python2.7/node.h
+x include/python2.7/object.h
+x include/python2.7/objimpl.h
+x include/python2.7/opcode.h
+x include/python2.7/osdefs.h
+x include/python2.7/parsetok.h
+x include/python2.7/patchlevel.h
+x include/python2.7/pgen.h
+x include/python2.7/pgenheaders.h
+x include/python2.7/py_curses.h
+x include/python2.7/pyarena.h
+x include/python2.7/pycapsule.h
+x include/python2.7/pyconfig.h
+x include/python2.7/pyctype.h
+x include/python2.7/pydebug.h
+x include/python2.7/pyerrors.h
+x include/python2.7/pyexpat.h
+x include/python2.7/pyfpe.h
+x include/python2.7/pygetopt.h
+x include/python2.7/pymacconfig.h
+x include/python2.7/pymactoolbox.h
+x include/python2.7/pymath.h
+x include/python2.7/pymem.h
+x include/python2.7/pyport.h
+x include/python2.7/pystate.h
+x include/python2.7/pystrcmp.h
+x include/python2.7/pystrtod.h
+x include/python2.7/Python-ast.h
+x include/python2.7/Python.h
+x include/python2.7/pythonrun.h
+x include/python2.7/pythread.h
+x include/python2.7/rangeobject.h
+x include/python2.7/setobject.h
+x include/python2.7/sliceobject.h
+x include/python2.7/stringobject.h
+x include/python2.7/structmember.h
+x include/python2.7/structseq.h
+x include/python2.7/symtable.h
+x include/python2.7/sysmodule.h
+x include/python2.7/timefuncs.h
+x include/python2.7/token.h
+x include/python2.7/traceback.h
+x include/python2.7/tupleobject.h
+x include/python2.7/ucnhash.h
+x include/python2.7/unicodeobject.h
+x include/python2.7/warnings.h
+x include/python2.7/weakrefobject.h
+x include/freetype/config/
+x include/freetype/freetype.h
+x include/freetype/ftadvanc.h
+x include/freetype/ftbbox.h
+x include/freetype/ftbdf.h
+x include/freetype/ftbitmap.h
+x include/freetype/ftbzip2.h
+x include/freetype/ftcache.h
+x include/freetype/ftchapters.h
+x include/freetype/ftcid.h
+x include/freetype/fterrdef.h
+x include/freetype/fterrors.h
+x include/freetype/ftgasp.h
+x include/freetype/ftglyph.h
+x include/freetype/ftgxval.h
+x include/freetype/ftgzip.h
+x include/freetype/ftimage.h
+x include/freetype/ftincrem.h
+x include/freetype/ftlcdfil.h
+x include/freetype/ftlist.h
+x include/freetype/ftlzw.h
+x include/freetype/ftmac.h
+x include/freetype/ftmm.h
+x include/freetype/ftmodapi.h
+x include/freetype/ftmoderr.h
+x include/freetype/ftotval.h
+x include/freetype/ftoutln.h
+x include/freetype/ftpfr.h
+x include/freetype/ftrender.h
+x include/freetype/ftsizes.h
+x include/freetype/ftsnames.h
+x include/freetype/ftstroke.h
+x include/freetype/ftsynth.h
+x include/freetype/ftsystem.h
+x include/freetype/fttrigon.h
+x include/freetype/fttypes.h
+x include/freetype/ftwinfnt.h
+x include/freetype/ftxf86.h
+x include/freetype/internal/
+x include/freetype/t1tables.h
+x include/freetype/ttnameid.h
+x include/freetype/tttables.h
+x include/freetype/tttags.h
+x include/freetype/ttunpat.h
+x include/freetype/internal/autohint.h
+x include/freetype/internal/ftcalc.h
+x include/freetype/internal/ftdebug.h
+x include/freetype/internal/ftdriver.h
+x include/freetype/internal/ftgloadr.h
+x include/freetype/internal/ftmemory.h
+x include/freetype/internal/ftobjs.h
+x include/freetype/internal/ftpic.h
+x include/freetype/internal/ftrfork.h
+x include/freetype/internal/ftserv.h
+x include/freetype/internal/ftstream.h
+x include/freetype/internal/fttrace.h
+x include/freetype/internal/ftvalid.h
+x include/freetype/internal/internal.h
+x include/freetype/internal/psaux.h
+x include/freetype/internal/pshints.h
+x include/freetype/internal/services/
+x include/freetype/internal/sfnt.h
+x include/freetype/internal/t1types.h
+x include/freetype/internal/tttypes.h
+x include/freetype/internal/services/svbdf.h
+x include/freetype/internal/services/svcid.h
+x include/freetype/internal/services/svgldict.h
+x include/freetype/internal/services/svgxval.h
+x include/freetype/internal/services/svkern.h
+x include/freetype/internal/services/svmm.h
+x include/freetype/internal/services/svotval.h
+x include/freetype/internal/services/svpfr.h
+x include/freetype/internal/services/svpostnm.h
+x include/freetype/internal/services/svpscmap.h
+x include/freetype/internal/services/svpsinfo.h
+x include/freetype/internal/services/svsfnt.h
+x include/freetype/internal/services/svttcmap.h
+x include/freetype/internal/services/svtteng.h
+x include/freetype/internal/services/svttglyf.h
+x include/freetype/internal/services/svwinfnt.h
+x include/freetype/internal/services/svxf86nm.h
+x include/freetype/config/ftconfig.h
+x include/freetype/config/ftheader.h
+x include/freetype/config/ftmodule.h
+x include/freetype/config/ftoption.h
+x include/freetype/config/ftstdlib.h
+x lib/
+x lib/libcairo.2.dylib
+x lib/libcairo.dylib
+x lib/libfreetype.6.dylib
+x lib/libfreetype.dylib
+x lib/libjpeg.7.dylib
+x lib/libncurses.5.4.dylib
+x lib/libpixman-1.0.24.4.dylib
+x lib/libpixman-1.0.dylib
+x lib/libpixman-1.dylib
+x lib/libpng12.0.dylib
+x lib/libpng12.dylib
+x lib/libpython2.7.a
+x lib/libreadline.6.2.dylib
+x lib/libtcl8.5.dylib
+x lib/libtclstub8.5.a
+x lib/libtk8.5.dylib
+x lib/libtkstub8.5.a
+x lib/pkgconfig/
+x lib/python2.7/
+x lib/treectrl2.4.1/
+x lib/treectrl2.4.1/filelist-bindings.tcl
+x lib/treectrl2.4.1/htmldoc/
+x lib/treectrl2.4.1/libtreectrl2.4.dylib
+x lib/treectrl2.4.1/pkgIndex.tcl
+x lib/treectrl2.4.1/treectrl.tcl
+x lib/treectrl2.4.1/htmldoc/treectrl.html
+x lib/treectrl2.4.1/htmldoc/What-is-New-in-TkTreeCtrl.html
+x lib/python2.7/__future__.py
+x lib/python2.7/__phello__.foo.py
+x lib/python2.7/_abcoll.py
+x lib/python2.7/_LWPCookieJar.py
+x lib/python2.7/_MozillaCookieJar.py
+x lib/python2.7/_pyio.py
+x lib/python2.7/_strptime.py
+x lib/python2.7/_threading_local.py
+x lib/python2.7/_weakrefset.py
+x lib/python2.7/abc.py
+x lib/python2.7/aifc.py
+x lib/python2.7/antigravity.py
+x lib/python2.7/anydbm.py
+x lib/python2.7/argparse.py
+x lib/python2.7/ast.py
+x lib/python2.7/asynchat.py
+x lib/python2.7/asyncore.py
+x lib/python2.7/atexit.py
+x lib/python2.7/audiodev.py
+x lib/python2.7/base64.py
+x lib/python2.7/BaseHTTPServer.py
+x lib/python2.7/Bastion.py
+x lib/python2.7/bdb.py
+x lib/python2.7/binhex.py
+x lib/python2.7/bisect.py
+x lib/python2.7/bsddb/
+x lib/python2.7/calendar.py
+x lib/python2.7/cgi.py
+x lib/python2.7/CGIHTTPServer.py
+x lib/python2.7/cgitb.py
+x lib/python2.7/chunk.py
+x lib/python2.7/cmd.py
+x lib/python2.7/code.py
+x lib/python2.7/codecs.py
+x lib/python2.7/codeop.py
+x lib/python2.7/collections.py
+x lib/python2.7/colorsys.py
+x lib/python2.7/commands.py
+x lib/python2.7/compileall.py
+x lib/python2.7/compiler/
+x lib/python2.7/config/
+x lib/python2.7/ConfigParser.py
+x lib/python2.7/contextlib.py
+x lib/python2.7/Cookie.py
+x lib/python2.7/cookielib.py
+x lib/python2.7/copy.py
+x lib/python2.7/copy_reg.py
+x lib/python2.7/cProfile.py
+x lib/python2.7/csv.py
+x lib/python2.7/ctypes/
+x lib/python2.7/curses/
+x lib/python2.7/dbhash.py
+x lib/python2.7/decimal.py
+x lib/python2.7/difflib.py
+x lib/python2.7/dircache.py
+x lib/python2.7/dis.py
+x lib/python2.7/distutils/
+x lib/python2.7/doctest.py
+x lib/python2.7/DocXMLRPCServer.py
+x lib/python2.7/dumbdbm.py
+x lib/python2.7/dummy_thread.py
+x lib/python2.7/dummy_threading.py
+x lib/python2.7/email/
+x lib/python2.7/encodings/
+x lib/python2.7/filecmp.py
+x lib/python2.7/fileinput.py
+x lib/python2.7/fnmatch.py
+x lib/python2.7/formatter.py
+x lib/python2.7/fpformat.py
+x lib/python2.7/fractions.py
+x lib/python2.7/ftplib.py
+x lib/python2.7/functools.py
+x lib/python2.7/genericpath.py
+x lib/python2.7/getopt.py
+x lib/python2.7/getpass.py
+x lib/python2.7/gettext.py
+x lib/python2.7/glob.py
+x lib/python2.7/gzip.py
+x lib/python2.7/hashlib.py
+x lib/python2.7/heapq.py
+x lib/python2.7/hmac.py
+x lib/python2.7/hotshot/
+x lib/python2.7/htmlentitydefs.py
+x lib/python2.7/htmllib.py
+x lib/python2.7/HTMLParser.py
+x lib/python2.7/httplib.py
+x lib/python2.7/idlelib/
+x lib/python2.7/ihooks.py
+x lib/python2.7/imaplib.py
+x lib/python2.7/imghdr.py
+x lib/python2.7/importlib/
+x lib/python2.7/imputil.py
+x lib/python2.7/inspect.py
+x lib/python2.7/io.py
+x lib/python2.7/json/
+x lib/python2.7/keyword.py
+x lib/python2.7/lib-dynload/
+x lib/python2.7/lib-tk/
+x lib/python2.7/lib2to3/
+x lib/python2.7/LICENSE.txt
+x lib/python2.7/linecache.py
+x lib/python2.7/locale.py
+x lib/python2.7/logging/
+x lib/python2.7/macpath.py
+x lib/python2.7/macurl2path.py
+x lib/python2.7/mailbox.py
+x lib/python2.7/mailcap.py
+x lib/python2.7/markupbase.py
+x lib/python2.7/md5.py
+x lib/python2.7/mhlib.py
+x lib/python2.7/mimetools.py
+x lib/python2.7/mimetypes.py
+x lib/python2.7/MimeWriter.py
+x lib/python2.7/mimify.py
+x lib/python2.7/modulefinder.py
+x lib/python2.7/multifile.py
+x lib/python2.7/multiprocessing/
+x lib/python2.7/mutex.py
+x lib/python2.7/netrc.py
+x lib/python2.7/new.py
+x lib/python2.7/nntplib.py
+x lib/python2.7/ntpath.py
+x lib/python2.7/nturl2path.py
+x lib/python2.7/numbers.py
+x lib/python2.7/opcode.py
+x lib/python2.7/optparse.py
+x lib/python2.7/os.py
+x lib/python2.7/os2emxpath.py
+x lib/python2.7/pdb.doc
+x lib/python2.7/pdb.py
+x lib/python2.7/pickle.py
+x lib/python2.7/pickletools.py
+x lib/python2.7/pipes.py
+x lib/python2.7/pkgutil.py
+x lib/python2.7/plat-darwin/
+x lib/python2.7/plat-mac/
+x lib/python2.7/platform.py
+x lib/python2.7/plistlib.py
+x lib/python2.7/popen2.py
+x lib/python2.7/poplib.py
+x lib/python2.7/posixfile.py
+x lib/python2.7/posixpath.py
+x lib/python2.7/pprint.py
+x lib/python2.7/profile.py
+x lib/python2.7/pstats.py
+x lib/python2.7/pty.py
+x lib/python2.7/py_compile.py
+x lib/python2.7/pyclbr.py
+x lib/python2.7/pydoc.py
+x lib/python2.7/pydoc_data/
+x lib/python2.7/Queue.py
+x lib/python2.7/quopri.py
+x lib/python2.7/random.py
+x lib/python2.7/re.py
+x lib/python2.7/repr.py
+x lib/python2.7/rexec.py
+x lib/python2.7/rfc822.py
+x lib/python2.7/rlcompleter.py
+x lib/python2.7/robotparser.py
+x lib/python2.7/runpy.py
+x lib/python2.7/sched.py
+x lib/python2.7/sets.py
+x lib/python2.7/sgmllib.py
+x lib/python2.7/sha.py
+x lib/python2.7/shelve.py
+x lib/python2.7/shlex.py
+x lib/python2.7/shutil.py
+x lib/python2.7/SimpleHTTPServer.py
+x lib/python2.7/SimpleXMLRPCServer.py
+x lib/python2.7/site-packages/
+x lib/python2.7/site.py
+x lib/python2.7/smtpd.py
+x lib/python2.7/smtplib.py
+x lib/python2.7/sndhdr.py
+x lib/python2.7/socket.py
+x lib/python2.7/SocketServer.py
+x lib/python2.7/sqlite3/
+x lib/python2.7/sre.py
+x lib/python2.7/sre_compile.py
+x lib/python2.7/sre_constants.py
+x lib/python2.7/sre_parse.py
+x lib/python2.7/ssl.py
+x lib/python2.7/stat.py
+x lib/python2.7/statvfs.py
+x lib/python2.7/string.py
+x lib/python2.7/StringIO.py
+x lib/python2.7/stringold.py
+x lib/python2.7/stringprep.py
+x lib/python2.7/struct.py
+x lib/python2.7/subprocess.py
+x lib/python2.7/sunau.py
+x lib/python2.7/sunaudio.py
+x lib/python2.7/symbol.py
+x lib/python2.7/symtable.py
+x lib/python2.7/sysconfig.py
+x lib/python2.7/tabnanny.py
+x lib/python2.7/tarfile.py
+x lib/python2.7/telnetlib.py
+x lib/python2.7/tempfile.py
+x lib/python2.7/textwrap.py
+x lib/python2.7/this.py
+x lib/python2.7/threading.py
+x lib/python2.7/timeit.py
+x lib/python2.7/toaiff.py
+x lib/python2.7/token.py
+x lib/python2.7/tokenize.py
+x lib/python2.7/trace.py
+x lib/python2.7/traceback.py
+x lib/python2.7/tty.py
+x lib/python2.7/types.py
+x lib/python2.7/unittest/
+x lib/python2.7/urllib.py
+x lib/python2.7/urllib2.py
+x lib/python2.7/urlparse.py
+x lib/python2.7/user.py
+x lib/python2.7/UserDict.py
+x lib/python2.7/UserList.py
+x lib/python2.7/UserString.py
+x lib/python2.7/uu.py
+x lib/python2.7/uuid.py
+x lib/python2.7/warnings.py
+x lib/python2.7/wave.py
+x lib/python2.7/weakref.py
+x lib/python2.7/webbrowser.py
+x lib/python2.7/whichdb.py
+x lib/python2.7/wsgiref/
+x lib/python2.7/wsgiref.egg-info
+x lib/python2.7/xdrlib.py
+x lib/python2.7/xml/
+x lib/python2.7/xmllib.py
+x lib/python2.7/xmlrpclib.py
+x lib/python2.7/zipfile.py
+x lib/python2.7/xml/__init__.py
+x lib/python2.7/xml/dom/
+x lib/python2.7/xml/etree/
+x lib/python2.7/xml/parsers/
+x lib/python2.7/xml/sax/
+x lib/python2.7/xml/sax/__init__.py
+x lib/python2.7/xml/sax/_exceptions.py
+x lib/python2.7/xml/sax/expatreader.py
+x lib/python2.7/xml/sax/handler.py
+x lib/python2.7/xml/sax/saxutils.py
+x lib/python2.7/xml/sax/xmlreader.py
+x lib/python2.7/xml/parsers/__init__.py
+x lib/python2.7/xml/parsers/expat.py
+x lib/python2.7/xml/etree/__init__.py
+x lib/python2.7/xml/etree/cElementTree.py
+x lib/python2.7/xml/etree/ElementInclude.py
+x lib/python2.7/xml/etree/ElementPath.py
+x lib/python2.7/xml/etree/ElementTree.py
+x lib/python2.7/xml/dom/__init__.py
+x lib/python2.7/xml/dom/domreg.py
+x lib/python2.7/xml/dom/expatbuilder.py
+x lib/python2.7/xml/dom/minicompat.py
+x lib/python2.7/xml/dom/minidom.py
+x lib/python2.7/xml/dom/NodeFilter.py
+x lib/python2.7/xml/dom/pulldom.py
+x lib/python2.7/xml/dom/xmlbuilder.py
+x lib/python2.7/wsgiref/__init__.py
+x lib/python2.7/wsgiref/handlers.py
+x lib/python2.7/wsgiref/headers.py
+x lib/python2.7/wsgiref/simple_server.py
+x lib/python2.7/wsgiref/util.py
+x lib/python2.7/wsgiref/validate.py
+x lib/python2.7/unittest/__init__.py
+x lib/python2.7/unittest/__main__.py
+x lib/python2.7/unittest/case.py
+x lib/python2.7/unittest/loader.py
+x lib/python2.7/unittest/main.py
+x lib/python2.7/unittest/result.py
+x lib/python2.7/unittest/runner.py
+x lib/python2.7/unittest/signals.py
+x lib/python2.7/unittest/suite.py
+x lib/python2.7/unittest/util.py
+x lib/python2.7/sqlite3/__init__.py
+x lib/python2.7/sqlite3/dbapi2.py
+x lib/python2.7/sqlite3/dump.py
+x lib/python2.7/sqlite3/test/
+x lib/python2.7/sqlite3/test/__init__.py
+x lib/python2.7/sqlite3/test/dbapi.py
+x lib/python2.7/sqlite3/test/dump.py
+x lib/python2.7/sqlite3/test/factory.py
+x lib/python2.7/sqlite3/test/hooks.py
+x lib/python2.7/sqlite3/test/py25tests.py
+x lib/python2.7/sqlite3/test/regression.py
+x lib/python2.7/sqlite3/test/transactions.py
+x lib/python2.7/sqlite3/test/types.py
+x lib/python2.7/sqlite3/test/userfunctions.py
+x lib/python2.7/site-packages/PIL/
+x lib/python2.7/site-packages/PIL.pth
+x lib/python2.7/site-packages/README
+x lib/python2.7/site-packages/PIL/__init__.py
+x lib/python2.7/site-packages/PIL/_imaging.so
+x lib/python2.7/site-packages/PIL/_imagingft.so
+x lib/python2.7/site-packages/PIL/_imagingmath.so
+x lib/python2.7/site-packages/PIL/_imagingtk.so
+x lib/python2.7/site-packages/PIL/ArgImagePlugin.py
+x lib/python2.7/site-packages/PIL/BdfFontFile.py
+x lib/python2.7/site-packages/PIL/BmpImagePlugin.py
+x lib/python2.7/site-packages/PIL/BufrStubImagePlugin.py
+x lib/python2.7/site-packages/PIL/ContainerIO.py
+x lib/python2.7/site-packages/PIL/CurImagePlugin.py
+x lib/python2.7/site-packages/PIL/DcxImagePlugin.py
+x lib/python2.7/site-packages/PIL/EpsImagePlugin.py
+x lib/python2.7/site-packages/PIL/ExifTags.py
+x lib/python2.7/site-packages/PIL/FitsStubImagePlugin.py
+x lib/python2.7/site-packages/PIL/FliImagePlugin.py
+x lib/python2.7/site-packages/PIL/FontFile.py
+x lib/python2.7/site-packages/PIL/FpxImagePlugin.py
+x lib/python2.7/site-packages/PIL/GbrImagePlugin.py
+x lib/python2.7/site-packages/PIL/GdImageFile.py
+x lib/python2.7/site-packages/PIL/GifImagePlugin.py
+x lib/python2.7/site-packages/PIL/GimpGradientFile.py
+x lib/python2.7/site-packages/PIL/GimpPaletteFile.py
+x lib/python2.7/site-packages/PIL/GribStubImagePlugin.py
+x lib/python2.7/site-packages/PIL/Hdf5StubImagePlugin.py
+x lib/python2.7/site-packages/PIL/IcnsImagePlugin.py
+x lib/python2.7/site-packages/PIL/IcoImagePlugin.py
+x lib/python2.7/site-packages/PIL/Image.py
+x lib/python2.7/site-packages/PIL/ImageChops.py
+x lib/python2.7/site-packages/PIL/ImageCms.py
+x lib/python2.7/site-packages/PIL/ImageColor.py
+x lib/python2.7/site-packages/PIL/ImageDraw.py
+x lib/python2.7/site-packages/PIL/ImageDraw2.py
+x lib/python2.7/site-packages/PIL/ImageEnhance.py
+x lib/python2.7/site-packages/PIL/ImageFile.py
+x lib/python2.7/site-packages/PIL/ImageFileIO.py
+x lib/python2.7/site-packages/PIL/ImageFilter.py
+x lib/python2.7/site-packages/PIL/ImageFont.py
+x lib/python2.7/site-packages/PIL/ImageGL.py
+x lib/python2.7/site-packages/PIL/ImageGrab.py
+x lib/python2.7/site-packages/PIL/ImageMath.py
+x lib/python2.7/site-packages/PIL/ImageMode.py
+x lib/python2.7/site-packages/PIL/ImageOps.py
+x lib/python2.7/site-packages/PIL/ImagePalette.py
+x lib/python2.7/site-packages/PIL/ImagePath.py
+x lib/python2.7/site-packages/PIL/ImageQt.py
+x lib/python2.7/site-packages/PIL/ImageSequence.py
+x lib/python2.7/site-packages/PIL/ImageShow.py
+x lib/python2.7/site-packages/PIL/ImageStat.py
+x lib/python2.7/site-packages/PIL/ImageTk.py
+x lib/python2.7/site-packages/PIL/ImageTransform.py
+x lib/python2.7/site-packages/PIL/ImageWin.py
+x lib/python2.7/site-packages/PIL/ImImagePlugin.py
+x lib/python2.7/site-packages/PIL/ImtImagePlugin.py
+x lib/python2.7/site-packages/PIL/IptcImagePlugin.py
+x lib/python2.7/site-packages/PIL/JpegImagePlugin.py
+x lib/python2.7/site-packages/PIL/McIdasImagePlugin.py
+x lib/python2.7/site-packages/PIL/MicImagePlugin.py
+x lib/python2.7/site-packages/PIL/MpegImagePlugin.py
+x lib/python2.7/site-packages/PIL/MspImagePlugin.py
+x lib/python2.7/site-packages/PIL/OleFileIO.py
+x lib/python2.7/site-packages/PIL/PaletteFile.py
+x lib/python2.7/site-packages/PIL/PalmImagePlugin.py
+x lib/python2.7/site-packages/PIL/PcdImagePlugin.py
+x lib/python2.7/site-packages/PIL/PcfFontFile.py
+x lib/python2.7/site-packages/PIL/PcxImagePlugin.py
+x lib/python2.7/site-packages/PIL/PdfImagePlugin.py
+x lib/python2.7/site-packages/PIL/PIL-1.1.7-py2.7.egg-info
+x lib/python2.7/site-packages/PIL/PixarImagePlugin.py
+x lib/python2.7/site-packages/PIL/PngImagePlugin.py
+x lib/python2.7/site-packages/PIL/PpmImagePlugin.py
+x lib/python2.7/site-packages/PIL/PsdImagePlugin.py
+x lib/python2.7/site-packages/PIL/PSDraw.py
+x lib/python2.7/site-packages/PIL/SgiImagePlugin.py
+x lib/python2.7/site-packages/PIL/SpiderImagePlugin.py
+x lib/python2.7/site-packages/PIL/SunImagePlugin.py
+x lib/python2.7/site-packages/PIL/TarIO.py
+x lib/python2.7/site-packages/PIL/TgaImagePlugin.py
+x lib/python2.7/site-packages/PIL/TiffImagePlugin.py
+x lib/python2.7/site-packages/PIL/TiffTags.py
+x lib/python2.7/site-packages/PIL/WalImageFile.py
+x lib/python2.7/site-packages/PIL/WmfImagePlugin.py
+x lib/python2.7/site-packages/PIL/XbmImagePlugin.py
+x lib/python2.7/site-packages/PIL/XpmImagePlugin.py
+x lib/python2.7/site-packages/PIL/XVThumbImagePlugin.py
+x lib/python2.7/pydoc_data/__init__.py
+x lib/python2.7/pydoc_data/topics.py
+x lib/python2.7/plat-mac/aepack.py
+x lib/python2.7/plat-mac/aetools.py
+x lib/python2.7/plat-mac/aetypes.py
+x lib/python2.7/plat-mac/applesingle.py
+x lib/python2.7/plat-mac/appletrawmain.py
+x lib/python2.7/plat-mac/appletrunner.py
+x lib/python2.7/plat-mac/argvemulator.py
+x lib/python2.7/plat-mac/Audio_mac.py
+x lib/python2.7/plat-mac/bgenlocations.py
+x lib/python2.7/plat-mac/buildtools.py
+x lib/python2.7/plat-mac/bundlebuilder.py
+x lib/python2.7/plat-mac/Carbon/
+x lib/python2.7/plat-mac/cfmfile.py
+x lib/python2.7/plat-mac/dialogs.rsrc
+x lib/python2.7/plat-mac/EasyDialogs.py
+x lib/python2.7/plat-mac/errors.rsrc
+x lib/python2.7/plat-mac/findertools.py
+x lib/python2.7/plat-mac/FrameWork.py
+x lib/python2.7/plat-mac/gensuitemodule.py
+x lib/python2.7/plat-mac/ic.py
+x lib/python2.7/plat-mac/icopen.py
+x lib/python2.7/plat-mac/lib-scriptpackages/
+x lib/python2.7/plat-mac/macerrors.py
+x lib/python2.7/plat-mac/macostools.py
+x lib/python2.7/plat-mac/macresource.py
+x lib/python2.7/plat-mac/MiniAEFrame.py
+x lib/python2.7/plat-mac/pimp.py
+x lib/python2.7/plat-mac/PixMapWrapper.py
+x lib/python2.7/plat-mac/terminalcommand.py
+x lib/python2.7/plat-mac/videoreader.py
+x lib/python2.7/plat-mac/lib-scriptpackages/_builtinSuites/
+x lib/python2.7/plat-mac/lib-scriptpackages/CodeWarrior/
+x lib/python2.7/plat-mac/lib-scriptpackages/Explorer/
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/
+x lib/python2.7/plat-mac/lib-scriptpackages/Netscape/
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/
+x lib/python2.7/plat-mac/lib-scriptpackages/Terminal/
+x lib/python2.7/plat-mac/lib-scriptpackages/Terminal/__init__.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Terminal/Standard_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Terminal/Terminal_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Terminal/Text_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/__init__.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/Disk_Folder_File_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/Folder_Actions_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/Hidden_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/Login_Items_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/Power_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/Processes_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/Standard_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/System_Events_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/SystemEvents/Text_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/__init__.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/AppleScript_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/Macintosh_Connectivity_Clas.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/QuickDraw_Graphics_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/QuickDraw_Graphics_Suppleme.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/Required_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/Standard_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/Table_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/Text_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/StdSuites/Type_Names_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Netscape/__init__.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Netscape/Mozilla_suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Netscape/PowerPlant.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Netscape/Required_suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Netscape/Standard_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Netscape/Standard_URL_suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Netscape/Text.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Netscape/WorldWideWeb_suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/__init__.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/Containers_and_folders.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/Enumerations.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/Files.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/Finder_Basics.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/Finder_items.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/Legacy_suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/Standard_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/Type_Definitions.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Finder/Window_classes.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Explorer/__init__.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Explorer/Microsoft_Internet_Explorer.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Explorer/Netscape_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Explorer/Required_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Explorer/Standard_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Explorer/URL_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/Explorer/Web_Browser_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/CodeWarrior/__init__.py
+x lib/python2.7/plat-mac/lib-scriptpackages/CodeWarrior/CodeWarrior_suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/CodeWarrior/Metrowerks_Shell_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/CodeWarrior/Required.py
+x lib/python2.7/plat-mac/lib-scriptpackages/CodeWarrior/Standard_Suite.py
+x lib/python2.7/plat-mac/lib-scriptpackages/_builtinSuites/__init__.py
+x lib/python2.7/plat-mac/lib-scriptpackages/_builtinSuites/builtin_Suite.py
+x lib/python2.7/plat-mac/Carbon/__init__.py
+x lib/python2.7/plat-mac/Carbon/AE.py
+x lib/python2.7/plat-mac/Carbon/AH.py
+x lib/python2.7/plat-mac/Carbon/Alias.py
+x lib/python2.7/plat-mac/Carbon/Aliases.py
+x lib/python2.7/plat-mac/Carbon/App.py
+x lib/python2.7/plat-mac/Carbon/Appearance.py
+x lib/python2.7/plat-mac/Carbon/AppleEvents.py
+x lib/python2.7/plat-mac/Carbon/AppleHelp.py
+x lib/python2.7/plat-mac/Carbon/CarbonEvents.py
+x lib/python2.7/plat-mac/Carbon/CarbonEvt.py
+x lib/python2.7/plat-mac/Carbon/CF.py
+x lib/python2.7/plat-mac/Carbon/CG.py
+x lib/python2.7/plat-mac/Carbon/Cm.py
+x lib/python2.7/plat-mac/Carbon/Components.py
+x lib/python2.7/plat-mac/Carbon/ControlAccessor.py
+x lib/python2.7/plat-mac/Carbon/Controls.py
+x lib/python2.7/plat-mac/Carbon/CoreFoundation.py
+x lib/python2.7/plat-mac/Carbon/CoreGraphics.py
+x lib/python2.7/plat-mac/Carbon/Ctl.py
+x lib/python2.7/plat-mac/Carbon/Dialogs.py
+x lib/python2.7/plat-mac/Carbon/Dlg.py
+x lib/python2.7/plat-mac/Carbon/Drag.py
+x lib/python2.7/plat-mac/Carbon/Dragconst.py
+x lib/python2.7/plat-mac/Carbon/Events.py
+x lib/python2.7/plat-mac/Carbon/Evt.py
+x lib/python2.7/plat-mac/Carbon/File.py
+x lib/python2.7/plat-mac/Carbon/Files.py
+x lib/python2.7/plat-mac/Carbon/Fm.py
+x lib/python2.7/plat-mac/Carbon/Folder.py
+x lib/python2.7/plat-mac/Carbon/Folders.py
+x lib/python2.7/plat-mac/Carbon/Fonts.py
+x lib/python2.7/plat-mac/Carbon/Help.py
+x lib/python2.7/plat-mac/Carbon/IBCarbon.py
+x lib/python2.7/plat-mac/Carbon/IBCarbonRuntime.py
+x lib/python2.7/plat-mac/Carbon/Icn.py
+x lib/python2.7/plat-mac/Carbon/Icons.py
+x lib/python2.7/plat-mac/Carbon/Launch.py
+x lib/python2.7/plat-mac/Carbon/LaunchServices.py
+x lib/python2.7/plat-mac/Carbon/List.py
+x lib/python2.7/plat-mac/Carbon/Lists.py
+x lib/python2.7/plat-mac/Carbon/MacHelp.py
+x lib/python2.7/plat-mac/Carbon/MacTextEditor.py
+x lib/python2.7/plat-mac/Carbon/MediaDescr.py
+x lib/python2.7/plat-mac/Carbon/Menu.py
+x lib/python2.7/plat-mac/Carbon/Menus.py
+x lib/python2.7/plat-mac/Carbon/Mlte.py
+x lib/python2.7/plat-mac/Carbon/OSA.py
+x lib/python2.7/plat-mac/Carbon/OSAconst.py
+x lib/python2.7/plat-mac/Carbon/Qd.py
+x lib/python2.7/plat-mac/Carbon/Qdoffs.py
+x lib/python2.7/plat-mac/Carbon/QDOffscreen.py
+x lib/python2.7/plat-mac/Carbon/Qt.py
+x lib/python2.7/plat-mac/Carbon/QuickDraw.py
+x lib/python2.7/plat-mac/Carbon/QuickTime.py
+x lib/python2.7/plat-mac/Carbon/Res.py
+x lib/python2.7/plat-mac/Carbon/Resources.py
+x lib/python2.7/plat-mac/Carbon/Scrap.py
+x lib/python2.7/plat-mac/Carbon/Snd.py
+x lib/python2.7/plat-mac/Carbon/Sndihooks.py
+x lib/python2.7/plat-mac/Carbon/Sound.py
+x lib/python2.7/plat-mac/Carbon/TE.py
+x lib/python2.7/plat-mac/Carbon/TextEdit.py
+x lib/python2.7/plat-mac/Carbon/Win.py
+x lib/python2.7/plat-mac/Carbon/Windows.py
+x lib/python2.7/plat-darwin/IN.py
+x lib/python2.7/plat-darwin/regen
+x lib/python2.7/multiprocessing/__init__.py
+x lib/python2.7/multiprocessing/connection.py
+x lib/python2.7/multiprocessing/dummy/
+x lib/python2.7/multiprocessing/forking.py
+x lib/python2.7/multiprocessing/heap.py
+x lib/python2.7/multiprocessing/managers.py
+x lib/python2.7/multiprocessing/pool.py
+x lib/python2.7/multiprocessing/process.py
+x lib/python2.7/multiprocessing/queues.py
+x lib/python2.7/multiprocessing/reduction.py
+x lib/python2.7/multiprocessing/sharedctypes.py
+x lib/python2.7/multiprocessing/synchronize.py
+x lib/python2.7/multiprocessing/util.py
+x lib/python2.7/multiprocessing/dummy/__init__.py
+x lib/python2.7/multiprocessing/dummy/connection.py
+x lib/python2.7/logging/__init__.py
+x lib/python2.7/logging/config.py
+x lib/python2.7/logging/handlers.py
+x lib/python2.7/lib2to3/__init__.py
+x lib/python2.7/lib2to3/__main__.py
+x lib/python2.7/lib2to3/btm_matcher.py
+x lib/python2.7/lib2to3/btm_utils.py
+x lib/python2.7/lib2to3/fixer_base.py
+x lib/python2.7/lib2to3/fixer_util.py
+x lib/python2.7/lib2to3/fixes/
+x lib/python2.7/lib2to3/Grammar.txt
+x lib/python2.7/lib2to3/Grammar2.7.3.final.0.pickle
+x lib/python2.7/lib2to3/main.py
+x lib/python2.7/lib2to3/patcomp.py
+x lib/python2.7/lib2to3/PatternGrammar.txt
+x lib/python2.7/lib2to3/PatternGrammar2.7.3.final.0.pickle
+x lib/python2.7/lib2to3/pgen2/
+x lib/python2.7/lib2to3/pygram.py
+x lib/python2.7/lib2to3/pytree.py
+x lib/python2.7/lib2to3/refactor.py
+x lib/python2.7/lib2to3/pgen2/__init__.py
+x lib/python2.7/lib2to3/pgen2/conv.py
+x lib/python2.7/lib2to3/pgen2/driver.py
+x lib/python2.7/lib2to3/pgen2/grammar.py
+x lib/python2.7/lib2to3/pgen2/literals.py
+x lib/python2.7/lib2to3/pgen2/parse.py
+x lib/python2.7/lib2to3/pgen2/pgen.py
+x lib/python2.7/lib2to3/pgen2/token.py
+x lib/python2.7/lib2to3/pgen2/tokenize.py
+x lib/python2.7/lib2to3/fixes/__init__.py
+x lib/python2.7/lib2to3/fixes/fix_apply.py
+x lib/python2.7/lib2to3/fixes/fix_basestring.py
+x lib/python2.7/lib2to3/fixes/fix_buffer.py
+x lib/python2.7/lib2to3/fixes/fix_callable.py
+x lib/python2.7/lib2to3/fixes/fix_dict.py
+x lib/python2.7/lib2to3/fixes/fix_except.py
+x lib/python2.7/lib2to3/fixes/fix_exec.py
+x lib/python2.7/lib2to3/fixes/fix_execfile.py
+x lib/python2.7/lib2to3/fixes/fix_exitfunc.py
+x lib/python2.7/lib2to3/fixes/fix_filter.py
+x lib/python2.7/lib2to3/fixes/fix_funcattrs.py
+x lib/python2.7/lib2to3/fixes/fix_future.py
+x lib/python2.7/lib2to3/fixes/fix_getcwdu.py
+x lib/python2.7/lib2to3/fixes/fix_has_key.py
+x lib/python2.7/lib2to3/fixes/fix_idioms.py
+x lib/python2.7/lib2to3/fixes/fix_import.py
+x lib/python2.7/lib2to3/fixes/fix_imports.py
+x lib/python2.7/lib2to3/fixes/fix_imports2.py
+x lib/python2.7/lib2to3/fixes/fix_input.py
+x lib/python2.7/lib2to3/fixes/fix_intern.py
+x lib/python2.7/lib2to3/fixes/fix_isinstance.py
+x lib/python2.7/lib2to3/fixes/fix_itertools.py
+x lib/python2.7/lib2to3/fixes/fix_itertools_imports.py
+x lib/python2.7/lib2to3/fixes/fix_long.py
+x lib/python2.7/lib2to3/fixes/fix_map.py
+x lib/python2.7/lib2to3/fixes/fix_metaclass.py
+x lib/python2.7/lib2to3/fixes/fix_methodattrs.py
+x lib/python2.7/lib2to3/fixes/fix_ne.py
+x lib/python2.7/lib2to3/fixes/fix_next.py
+x lib/python2.7/lib2to3/fixes/fix_nonzero.py
+x lib/python2.7/lib2to3/fixes/fix_numliterals.py
+x lib/python2.7/lib2to3/fixes/fix_operator.py
+x lib/python2.7/lib2to3/fixes/fix_paren.py
+x lib/python2.7/lib2to3/fixes/fix_print.py
+x lib/python2.7/lib2to3/fixes/fix_raise.py
+x lib/python2.7/lib2to3/fixes/fix_raw_input.py
+x lib/python2.7/lib2to3/fixes/fix_reduce.py
+x lib/python2.7/lib2to3/fixes/fix_renames.py
+x lib/python2.7/lib2to3/fixes/fix_repr.py
+x lib/python2.7/lib2to3/fixes/fix_set_literal.py
+x lib/python2.7/lib2to3/fixes/fix_standarderror.py
+x lib/python2.7/lib2to3/fixes/fix_sys_exc.py
+x lib/python2.7/lib2to3/fixes/fix_throw.py
+x lib/python2.7/lib2to3/fixes/fix_tuple_params.py
+x lib/python2.7/lib2to3/fixes/fix_types.py
+x lib/python2.7/lib2to3/fixes/fix_unicode.py
+x lib/python2.7/lib2to3/fixes/fix_urllib.py
+x lib/python2.7/lib2to3/fixes/fix_ws_comma.py
+x lib/python2.7/lib2to3/fixes/fix_xrange.py
+x lib/python2.7/lib2to3/fixes/fix_xreadlines.py
+x lib/python2.7/lib2to3/fixes/fix_zip.py
+x lib/python2.7/lib-tk/Canvas.py
+x lib/python2.7/lib-tk/Dialog.py
+x lib/python2.7/lib-tk/FileDialog.py
+x lib/python2.7/lib-tk/FixTk.py
+x lib/python2.7/lib-tk/ScrolledText.py
+x lib/python2.7/lib-tk/SimpleDialog.py
+x lib/python2.7/lib-tk/Tix.py
+x lib/python2.7/lib-tk/tkColorChooser.py
+x lib/python2.7/lib-tk/tkCommonDialog.py
+x lib/python2.7/lib-tk/Tkconstants.py
+x lib/python2.7/lib-tk/Tkdnd.py
+x lib/python2.7/lib-tk/tkFileDialog.py
+x lib/python2.7/lib-tk/tkFont.py
+x lib/python2.7/lib-tk/Tkinter.py
+x lib/python2.7/lib-tk/tkMessageBox.py
+x lib/python2.7/lib-tk/tkSimpleDialog.py
+x lib/python2.7/lib-tk/ttk.py
+x lib/python2.7/lib-tk/turtle.py
+x lib/python2.7/lib-dynload/_AE.so
+x lib/python2.7/lib-dynload/_AH.so
+x lib/python2.7/lib-dynload/_App.so
+x lib/python2.7/lib-dynload/_bisect.so
+x lib/python2.7/lib-dynload/_CarbonEvt.so
+x lib/python2.7/lib-dynload/_CF.so
+x lib/python2.7/lib-dynload/_CG.so
+x lib/python2.7/lib-dynload/_Cm.so
+x lib/python2.7/lib-dynload/_codecs_cn.so
+x lib/python2.7/lib-dynload/_codecs_hk.so
+x lib/python2.7/lib-dynload/_codecs_iso2022.so
+x lib/python2.7/lib-dynload/_codecs_jp.so
+x lib/python2.7/lib-dynload/_codecs_kr.so
+x lib/python2.7/lib-dynload/_codecs_tw.so
+x lib/python2.7/lib-dynload/_collections.so
+x lib/python2.7/lib-dynload/_csv.so
+x lib/python2.7/lib-dynload/_Ctl.so
+x lib/python2.7/lib-dynload/_ctypes.so
+x lib/python2.7/lib-dynload/_ctypes_test.so
+x lib/python2.7/lib-dynload/_curses.so
+x lib/python2.7/lib-dynload/_curses_panel.so
+x lib/python2.7/lib-dynload/_Dlg.so
+x lib/python2.7/lib-dynload/_Drag.so
+x lib/python2.7/lib-dynload/_elementtree.so
+x lib/python2.7/lib-dynload/_Evt.so
+x lib/python2.7/lib-dynload/_File.so
+x lib/python2.7/lib-dynload/_Fm.so
+x lib/python2.7/lib-dynload/_Folder.so
+x lib/python2.7/lib-dynload/_functools.so
+x lib/python2.7/lib-dynload/_hashlib.so
+x lib/python2.7/lib-dynload/_heapq.so
+x lib/python2.7/lib-dynload/_Help.so
+x lib/python2.7/lib-dynload/_hotshot.so
+x lib/python2.7/lib-dynload/_IBCarbon.so
+x lib/python2.7/lib-dynload/_Icn.so
+x lib/python2.7/lib-dynload/_io.so
+x lib/python2.7/lib-dynload/_json.so
+x lib/python2.7/lib-dynload/_Launch.so
+x lib/python2.7/lib-dynload/_List.so
+x lib/python2.7/lib-dynload/_locale.so
+x lib/python2.7/lib-dynload/_lsprof.so
+x lib/python2.7/lib-dynload/_Menu.so
+x lib/python2.7/lib-dynload/_Mlte.so
+x lib/python2.7/lib-dynload/_multibytecodec.so
+x lib/python2.7/lib-dynload/_multiprocessing.so
+x lib/python2.7/lib-dynload/_OSA.so
+x lib/python2.7/lib-dynload/_Qd.so
+x lib/python2.7/lib-dynload/_Qdoffs.so
+x lib/python2.7/lib-dynload/_Qt.so
+x lib/python2.7/lib-dynload/_random.so
+x lib/python2.7/lib-dynload/_Res.so
+x lib/python2.7/lib-dynload/_scproxy.so
+x lib/python2.7/lib-dynload/_Scrap.so
+x lib/python2.7/lib-dynload/_Snd.so
+x lib/python2.7/lib-dynload/_socket.so
+x lib/python2.7/lib-dynload/_sqlite3.so
+x lib/python2.7/lib-dynload/_ssl.so
+x lib/python2.7/lib-dynload/_struct.so
+x lib/python2.7/lib-dynload/_TE.so
+x lib/python2.7/lib-dynload/_testcapi.so
+x lib/python2.7/lib-dynload/_tkinter.so
+x lib/python2.7/lib-dynload/_Win.so
+x lib/python2.7/lib-dynload/array.so
+x lib/python2.7/lib-dynload/audioop.so
+x lib/python2.7/lib-dynload/autoGIL.so
+x lib/python2.7/lib-dynload/binascii.so
+x lib/python2.7/lib-dynload/bsddb185.so
+x lib/python2.7/lib-dynload/bz2.so
+x lib/python2.7/lib-dynload/cmath.so
+x lib/python2.7/lib-dynload/ColorPicker.so
+x lib/python2.7/lib-dynload/cPickle.so
+x lib/python2.7/lib-dynload/crypt.so
+x lib/python2.7/lib-dynload/cStringIO.so
+x lib/python2.7/lib-dynload/datetime.so
+x lib/python2.7/lib-dynload/dbm.so
+x lib/python2.7/lib-dynload/fcntl.so
+x lib/python2.7/lib-dynload/future_builtins.so
+x lib/python2.7/lib-dynload/gestalt.so
+x lib/python2.7/lib-dynload/grp.so
+x lib/python2.7/lib-dynload/icglue.so
+x lib/python2.7/lib-dynload/itertools.so
+x lib/python2.7/lib-dynload/MacOS.so
+x lib/python2.7/lib-dynload/math.so
+x lib/python2.7/lib-dynload/mmap.so
+x lib/python2.7/lib-dynload/Nav.so
+x lib/python2.7/lib-dynload/nis.so
+x lib/python2.7/lib-dynload/operator.so
+x lib/python2.7/lib-dynload/OSATerminology.so
+x lib/python2.7/lib-dynload/parser.so
+x lib/python2.7/lib-dynload/pyexpat.so
+x lib/python2.7/lib-dynload/Python-2.7.3-py2.7.egg-info
+x lib/python2.7/lib-dynload/readline.so
+x lib/python2.7/lib-dynload/resource.so
+x lib/python2.7/lib-dynload/select.so
+x lib/python2.7/lib-dynload/strop.so
+x lib/python2.7/lib-dynload/syslog.so
+x lib/python2.7/lib-dynload/termios.so
+x lib/python2.7/lib-dynload/time.so
+x lib/python2.7/lib-dynload/unicodedata.so
+x lib/python2.7/lib-dynload/zlib.so
+x lib/python2.7/json/__init__.py
+x lib/python2.7/json/decoder.py
+x lib/python2.7/json/encoder.py
+x lib/python2.7/json/scanner.py
+x lib/python2.7/json/tool.py
+x lib/python2.7/importlib/__init__.py
+x lib/python2.7/idlelib/__init__.py
+x lib/python2.7/idlelib/aboutDialog.py
+x lib/python2.7/idlelib/AutoComplete.py
+x lib/python2.7/idlelib/AutoCompleteWindow.py
+x lib/python2.7/idlelib/AutoExpand.py
+x lib/python2.7/idlelib/Bindings.py
+x lib/python2.7/idlelib/CallTips.py
+x lib/python2.7/idlelib/CallTipWindow.py
+x lib/python2.7/idlelib/ChangeLog
+x lib/python2.7/idlelib/ClassBrowser.py
+x lib/python2.7/idlelib/CodeContext.py
+x lib/python2.7/idlelib/ColorDelegator.py
+x lib/python2.7/idlelib/config-extensions.def
+x lib/python2.7/idlelib/config-highlight.def
+x lib/python2.7/idlelib/config-keys.def
+x lib/python2.7/idlelib/config-main.def
+x lib/python2.7/idlelib/configDialog.py
+x lib/python2.7/idlelib/configHandler.py
+x lib/python2.7/idlelib/configHelpSourceEdit.py
+x lib/python2.7/idlelib/configSectionNameDialog.py
+x lib/python2.7/idlelib/CREDITS.txt
+x lib/python2.7/idlelib/Debugger.py
+x lib/python2.7/idlelib/Delegator.py
+x lib/python2.7/idlelib/dynOptionMenuWidget.py
+x lib/python2.7/idlelib/EditorWindow.py
+x lib/python2.7/idlelib/extend.txt
+x lib/python2.7/idlelib/FileList.py
+x lib/python2.7/idlelib/FormatParagraph.py
+x lib/python2.7/idlelib/GrepDialog.py
+x lib/python2.7/idlelib/help.txt
+x lib/python2.7/idlelib/HISTORY.txt
+x lib/python2.7/idlelib/HyperParser.py
+x lib/python2.7/idlelib/Icons/
+x lib/python2.7/idlelib/idle.bat
+x lib/python2.7/idlelib/idle.py
+x lib/python2.7/idlelib/idle.pyw
+x lib/python2.7/idlelib/IdleHistory.py
+x lib/python2.7/idlelib/idlever.py
+x lib/python2.7/idlelib/IOBinding.py
+x lib/python2.7/idlelib/keybindingDialog.py
+x lib/python2.7/idlelib/macosxSupport.py
+x lib/python2.7/idlelib/MultiCall.py
+x lib/python2.7/idlelib/MultiStatusBar.py
+x lib/python2.7/idlelib/NEWS.txt
+x lib/python2.7/idlelib/ObjectBrowser.py
+x lib/python2.7/idlelib/OutputWindow.py
+x lib/python2.7/idlelib/ParenMatch.py
+x lib/python2.7/idlelib/PathBrowser.py
+x lib/python2.7/idlelib/Percolator.py
+x lib/python2.7/idlelib/PyParse.py
+x lib/python2.7/idlelib/PyShell.py
+x lib/python2.7/idlelib/README.txt
+x lib/python2.7/idlelib/RemoteDebugger.py
+x lib/python2.7/idlelib/RemoteObjectBrowser.py
+x lib/python2.7/idlelib/ReplaceDialog.py
+x lib/python2.7/idlelib/rpc.py
+x lib/python2.7/idlelib/RstripExtension.py
+x lib/python2.7/idlelib/run.py
+x lib/python2.7/idlelib/ScriptBinding.py
+x lib/python2.7/idlelib/ScrolledList.py
+x lib/python2.7/idlelib/SearchDialog.py
+x lib/python2.7/idlelib/SearchDialogBase.py
+x lib/python2.7/idlelib/SearchEngine.py
+x lib/python2.7/idlelib/StackViewer.py
+x lib/python2.7/idlelib/tabbedpages.py
+x lib/python2.7/idlelib/testcode.py
+x lib/python2.7/idlelib/textView.py
+x lib/python2.7/idlelib/TODO.txt
+x lib/python2.7/idlelib/ToolTip.py
+x lib/python2.7/idlelib/TreeWidget.py
+x lib/python2.7/idlelib/UndoDelegator.py
+x lib/python2.7/idlelib/WidgetRedirector.py
+x lib/python2.7/idlelib/WindowList.py
+x lib/python2.7/idlelib/ZoomHeight.py
+x lib/python2.7/idlelib/Icons/folder.gif
+x lib/python2.7/idlelib/Icons/idle.icns
+x lib/python2.7/idlelib/Icons/minusnode.gif
+x lib/python2.7/idlelib/Icons/openfolder.gif
+x lib/python2.7/idlelib/Icons/plusnode.gif
+x lib/python2.7/idlelib/Icons/python.gif
+x lib/python2.7/idlelib/Icons/tk.gif
+x lib/python2.7/hotshot/__init__.py
+x lib/python2.7/hotshot/log.py
+x lib/python2.7/hotshot/stats.py
+x lib/python2.7/hotshot/stones.py
+x lib/python2.7/encodings/__init__.py
+x lib/python2.7/encodings/aliases.py
+x lib/python2.7/encodings/ascii.py
+x lib/python2.7/encodings/base64_codec.py
+x lib/python2.7/encodings/big5.py
+x lib/python2.7/encodings/big5hkscs.py
+x lib/python2.7/encodings/bz2_codec.py
+x lib/python2.7/encodings/charmap.py
+x lib/python2.7/encodings/cp037.py
+x lib/python2.7/encodings/cp1006.py
+x lib/python2.7/encodings/cp1026.py
+x lib/python2.7/encodings/cp1140.py
+x lib/python2.7/encodings/cp1250.py
+x lib/python2.7/encodings/cp1251.py
+x lib/python2.7/encodings/cp1252.py
+x lib/python2.7/encodings/cp1253.py
+x lib/python2.7/encodings/cp1254.py
+x lib/python2.7/encodings/cp1255.py
+x lib/python2.7/encodings/cp1256.py
+x lib/python2.7/encodings/cp1257.py
+x lib/python2.7/encodings/cp1258.py
+x lib/python2.7/encodings/cp424.py
+x lib/python2.7/encodings/cp437.py
+x lib/python2.7/encodings/cp500.py
+x lib/python2.7/encodings/cp720.py
+x lib/python2.7/encodings/cp737.py
+x lib/python2.7/encodings/cp775.py
+x lib/python2.7/encodings/cp850.py
+x lib/python2.7/encodings/cp852.py
+x lib/python2.7/encodings/cp855.py
+x lib/python2.7/encodings/cp856.py
+x lib/python2.7/encodings/cp857.py
+x lib/python2.7/encodings/cp858.py
+x lib/python2.7/encodings/cp860.py
+x lib/python2.7/encodings/cp861.py
+x lib/python2.7/encodings/cp862.py
+x lib/python2.7/encodings/cp863.py
+x lib/python2.7/encodings/cp864.py
+x lib/python2.7/encodings/cp865.py
+x lib/python2.7/encodings/cp866.py
+x lib/python2.7/encodings/cp869.py
+x lib/python2.7/encodings/cp874.py
+x lib/python2.7/encodings/cp875.py
+x lib/python2.7/encodings/cp932.py
+x lib/python2.7/encodings/cp949.py
+x lib/python2.7/encodings/cp950.py
+x lib/python2.7/encodings/euc_jis_2004.py
+x lib/python2.7/encodings/euc_jisx0213.py
+x lib/python2.7/encodings/euc_jp.py
+x lib/python2.7/encodings/euc_kr.py
+x lib/python2.7/encodings/gb18030.py
+x lib/python2.7/encodings/gb2312.py
+x lib/python2.7/encodings/gbk.py
+x lib/python2.7/encodings/hex_codec.py
+x lib/python2.7/encodings/hp_roman8.py
+x lib/python2.7/encodings/hz.py
+x lib/python2.7/encodings/idna.py
+x lib/python2.7/encodings/iso2022_jp.py
+x lib/python2.7/encodings/iso2022_jp_1.py
+x lib/python2.7/encodings/iso2022_jp_2.py
+x lib/python2.7/encodings/iso2022_jp_2004.py
+x lib/python2.7/encodings/iso2022_jp_3.py
+x lib/python2.7/encodings/iso2022_jp_ext.py
+x lib/python2.7/encodings/iso2022_kr.py
+x lib/python2.7/encodings/iso8859_1.py
+x lib/python2.7/encodings/iso8859_10.py
+x lib/python2.7/encodings/iso8859_11.py
+x lib/python2.7/encodings/iso8859_13.py
+x lib/python2.7/encodings/iso8859_14.py
+x lib/python2.7/encodings/iso8859_15.py
+x lib/python2.7/encodings/iso8859_16.py
+x lib/python2.7/encodings/iso8859_2.py
+x lib/python2.7/encodings/iso8859_3.py
+x lib/python2.7/encodings/iso8859_4.py
+x lib/python2.7/encodings/iso8859_5.py
+x lib/python2.7/encodings/iso8859_6.py
+x lib/python2.7/encodings/iso8859_7.py
+x lib/python2.7/encodings/iso8859_8.py
+x lib/python2.7/encodings/iso8859_9.py
+x lib/python2.7/encodings/johab.py
+x lib/python2.7/encodings/koi8_r.py
+x lib/python2.7/encodings/koi8_u.py
+x lib/python2.7/encodings/latin_1.py
+x lib/python2.7/encodings/mac_arabic.py
+x lib/python2.7/encodings/mac_centeuro.py
+x lib/python2.7/encodings/mac_croatian.py
+x lib/python2.7/encodings/mac_cyrillic.py
+x lib/python2.7/encodings/mac_farsi.py
+x lib/python2.7/encodings/mac_greek.py
+x lib/python2.7/encodings/mac_iceland.py
+x lib/python2.7/encodings/mac_latin2.py
+x lib/python2.7/encodings/mac_roman.py
+x lib/python2.7/encodings/mac_romanian.py
+x lib/python2.7/encodings/mac_turkish.py
+x lib/python2.7/encodings/mbcs.py
+x lib/python2.7/encodings/palmos.py
+x lib/python2.7/encodings/ptcp154.py
+x lib/python2.7/encodings/punycode.py
+x lib/python2.7/encodings/quopri_codec.py
+x lib/python2.7/encodings/raw_unicode_escape.py
+x lib/python2.7/encodings/rot_13.py
+x lib/python2.7/encodings/shift_jis.py
+x lib/python2.7/encodings/shift_jis_2004.py
+x lib/python2.7/encodings/shift_jisx0213.py
+x lib/python2.7/encodings/string_escape.py
+x lib/python2.7/encodings/tis_620.py
+x lib/python2.7/encodings/undefined.py
+x lib/python2.7/encodings/unicode_escape.py
+x lib/python2.7/encodings/unicode_internal.py
+x lib/python2.7/encodings/utf_16.py
+x lib/python2.7/encodings/utf_16_be.py
+x lib/python2.7/encodings/utf_16_le.py
+x lib/python2.7/encodings/utf_32.py
+x lib/python2.7/encodings/utf_32_be.py
+x lib/python2.7/encodings/utf_32_le.py
+x lib/python2.7/encodings/utf_7.py
+x lib/python2.7/encodings/utf_8.py
+x lib/python2.7/encodings/utf_8_sig.py
+x lib/python2.7/encodings/uu_codec.py
+x lib/python2.7/encodings/zlib_codec.py
+x lib/python2.7/email/__init__.py
+x lib/python2.7/email/_parseaddr.py
+x lib/python2.7/email/base64mime.py
+x lib/python2.7/email/charset.py
+x lib/python2.7/email/encoders.py
+x lib/python2.7/email/errors.py
+x lib/python2.7/email/feedparser.py
+x lib/python2.7/email/generator.py
+x lib/python2.7/email/header.py
+x lib/python2.7/email/iterators.py
+x lib/python2.7/email/message.py
+x lib/python2.7/email/mime/
+x lib/python2.7/email/parser.py
+x lib/python2.7/email/quoprimime.py
+x lib/python2.7/email/utils.py
+x lib/python2.7/email/mime/__init__.py
+x lib/python2.7/email/mime/application.py
+x lib/python2.7/email/mime/audio.py
+x lib/python2.7/email/mime/base.py
+x lib/python2.7/email/mime/image.py
+x lib/python2.7/email/mime/message.py
+x lib/python2.7/email/mime/multipart.py
+x lib/python2.7/email/mime/nonmultipart.py
+x lib/python2.7/email/mime/text.py
+x lib/python2.7/distutils/__init__.py
+x lib/python2.7/distutils/archive_util.py
+x lib/python2.7/distutils/bcppcompiler.py
+x lib/python2.7/distutils/ccompiler.py
+x lib/python2.7/distutils/cmd.py
+x lib/python2.7/distutils/command/
+x lib/python2.7/distutils/config.py
+x lib/python2.7/distutils/core.py
+x lib/python2.7/distutils/cygwinccompiler.py
+x lib/python2.7/distutils/debug.py
+x lib/python2.7/distutils/dep_util.py
+x lib/python2.7/distutils/dir_util.py
+x lib/python2.7/distutils/dist.py
+x lib/python2.7/distutils/emxccompiler.py
+x lib/python2.7/distutils/errors.py
+x lib/python2.7/distutils/extension.py
+x lib/python2.7/distutils/fancy_getopt.py
+x lib/python2.7/distutils/file_util.py
+x lib/python2.7/distutils/filelist.py
+x lib/python2.7/distutils/log.py
+x lib/python2.7/distutils/msvc9compiler.py
+x lib/python2.7/distutils/msvccompiler.py
+x lib/python2.7/distutils/README
+x lib/python2.7/distutils/spawn.py
+x lib/python2.7/distutils/sysconfig.py
+x lib/python2.7/distutils/text_file.py
+x lib/python2.7/distutils/unixccompiler.py
+x lib/python2.7/distutils/util.py
+x lib/python2.7/distutils/version.py
+x lib/python2.7/distutils/versionpredicate.py
+x lib/python2.7/distutils/command/__init__.py
+x lib/python2.7/distutils/command/bdist.py
+x lib/python2.7/distutils/command/bdist_dumb.py
+x lib/python2.7/distutils/command/bdist_msi.py
+x lib/python2.7/distutils/command/bdist_rpm.py
+x lib/python2.7/distutils/command/bdist_wininst.py
+x lib/python2.7/distutils/command/build.py
+x lib/python2.7/distutils/command/build_clib.py
+x lib/python2.7/distutils/command/build_ext.py
+x lib/python2.7/distutils/command/build_py.py
+x lib/python2.7/distutils/command/build_scripts.py
+x lib/python2.7/distutils/command/check.py
+x lib/python2.7/distutils/command/clean.py
+x lib/python2.7/distutils/command/command_template
+x lib/python2.7/distutils/command/config.py
+x lib/python2.7/distutils/command/install.py
+x lib/python2.7/distutils/command/install_data.py
+x lib/python2.7/distutils/command/install_egg_info.py
+x lib/python2.7/distutils/command/install_headers.py
+x lib/python2.7/distutils/command/install_lib.py
+x lib/python2.7/distutils/command/install_scripts.py
+x lib/python2.7/distutils/command/register.py
+x lib/python2.7/distutils/command/sdist.py
+x lib/python2.7/distutils/command/upload.py
+x lib/python2.7/distutils/command/wininst-6.0.exe
+x lib/python2.7/distutils/command/wininst-7.1.exe
+x lib/python2.7/distutils/command/wininst-8.0.exe
+x lib/python2.7/distutils/command/wininst-9.0-amd64.exe
+x lib/python2.7/distutils/command/wininst-9.0.exe
+x lib/python2.7/curses/__init__.py
+x lib/python2.7/curses/ascii.py
+x lib/python2.7/curses/has_key.py
+x lib/python2.7/curses/panel.py
+x lib/python2.7/curses/textpad.py
+x lib/python2.7/curses/wrapper.py
+x lib/python2.7/ctypes/__init__.py
+x lib/python2.7/ctypes/_endian.py
+x lib/python2.7/ctypes/macholib/
+x lib/python2.7/ctypes/util.py
+x lib/python2.7/ctypes/wintypes.py
+x lib/python2.7/ctypes/macholib/__init__.py
+x lib/python2.7/ctypes/macholib/dyld.py
+x lib/python2.7/ctypes/macholib/dylib.py
+x lib/python2.7/ctypes/macholib/fetch_macholib
+x lib/python2.7/ctypes/macholib/fetch_macholib.bat
+x lib/python2.7/ctypes/macholib/framework.py
+x lib/python2.7/ctypes/macholib/README.ctypes
+x lib/python2.7/config/config.c
+x lib/python2.7/config/config.c.in
+x lib/python2.7/config/install-sh
+x lib/python2.7/config/libpython2.7.a
+x lib/python2.7/config/Makefile
+x lib/python2.7/config/makesetup
+x lib/python2.7/config/python.o
+x lib/python2.7/config/Setup
+x lib/python2.7/config/Setup.config
+x lib/python2.7/config/Setup.local
+x lib/python2.7/compiler/__init__.py
+x lib/python2.7/compiler/ast.py
+x lib/python2.7/compiler/consts.py
+x lib/python2.7/compiler/future.py
+x lib/python2.7/compiler/misc.py
+x lib/python2.7/compiler/pyassem.py
+x lib/python2.7/compiler/pycodegen.py
+x lib/python2.7/compiler/symbols.py
+x lib/python2.7/compiler/syntax.py
+x lib/python2.7/compiler/transformer.py
+x lib/python2.7/compiler/visitor.py
+x lib/python2.7/bsddb/__init__.py
+x lib/python2.7/bsddb/db.py
+x lib/python2.7/bsddb/dbobj.py
+x lib/python2.7/bsddb/dbrecio.py
+x lib/python2.7/bsddb/dbshelve.py
+x lib/python2.7/bsddb/dbtables.py
+x lib/python2.7/bsddb/dbutils.py
+x lib/pkgconfig/openbabel-2.0.pc
+x lib/pkgconfig/python-2.7.pc
+x lib/pkgconfig/python.pc
+x lib/pkgconfig/python2.pc
+x tcl8.5/
+x tcl8.5/auto.tcl
+x tcl8.5/clock.tcl
+x tcl8.5/history.tcl
+x tcl8.5/init.tcl
+x tcl8.5/package.tcl
+x tcl8.5/parray.tcl
+x tcl8.5/safe.tcl
+x tcl8.5/tclIndex
+x tcl8.5/tm.tcl
+x tcl8.5/word.tcl
+x tk8.5/
+x tk8.5/bgerror.tcl
+x tk8.5/button.tcl
+x tk8.5/choosedir.tcl
+x tk8.5/clrpick.tcl
+x tk8.5/comdlg.tcl
+x tk8.5/console.tcl
+x tk8.5/dialog.tcl
+x tk8.5/entry.tcl
+x tk8.5/focus.tcl
+x tk8.5/images/
+x tk8.5/license.terms
+x tk8.5/listbox.tcl
+x tk8.5/menu.tcl
+x tk8.5/mkpsenc.tcl
+x tk8.5/msgbox.tcl
+x tk8.5/msgs/
+x tk8.5/obsolete.tcl
+x tk8.5/optMenu.tcl
+x tk8.5/palette.tcl
+x tk8.5/panedwindow.tcl
+x tk8.5/safetk.tcl
+x tk8.5/scale.tcl
+x tk8.5/scrlbar.tcl
+x tk8.5/spinbox.tcl
+x tk8.5/tclIndex
+x tk8.5/tearoff.tcl
+x tk8.5/text.tcl
+x tk8.5/tk.tcl
+x tk8.5/tkfbox.tcl
+x tk8.5/ttk/
+x tk8.5/unsupported.tcl
+x tk8.5/xmfbox.tcl
+x tk8.5/ttk/altTheme.tcl
+x tk8.5/ttk/aquaTheme.tcl
+x tk8.5/ttk/button.tcl
+x tk8.5/ttk/clamTheme.tcl
+x tk8.5/ttk/classicTheme.tcl
+x tk8.5/ttk/combobox.tcl
+x tk8.5/ttk/cursors.tcl
+x tk8.5/ttk/defaults.tcl
+x tk8.5/ttk/entry.tcl
+x tk8.5/ttk/fonts.tcl
+x tk8.5/ttk/menubutton.tcl
+x tk8.5/ttk/notebook.tcl
+x tk8.5/ttk/panedwindow.tcl
+x tk8.5/ttk/progress.tcl
+x tk8.5/ttk/scale.tcl
+x tk8.5/ttk/scrollbar.tcl
+x tk8.5/ttk/sizegrip.tcl
+x tk8.5/ttk/spinbox.tcl
+x tk8.5/ttk/treeview.tcl
+x tk8.5/ttk/ttk.tcl
+x tk8.5/ttk/utils.tcl
+x tk8.5/ttk/vistaTheme.tcl
+x tk8.5/ttk/winTheme.tcl
+x tk8.5/ttk/xpTheme.tcl
+x tk8.5/msgs/cs.msg
+x tk8.5/msgs/da.msg
+x tk8.5/msgs/de.msg
+x tk8.5/msgs/el.msg
+x tk8.5/msgs/en.msg
+x tk8.5/msgs/en_gb.msg
+x tk8.5/msgs/eo.msg
+x tk8.5/msgs/es.msg
+x tk8.5/msgs/fr.msg
+x tk8.5/msgs/hu.msg
+x tk8.5/msgs/it.msg
+x tk8.5/msgs/nl.msg
+x tk8.5/msgs/pl.msg
+x tk8.5/msgs/pt.msg
+x tk8.5/msgs/ru.msg
+x tk8.5/msgs/sv.msg
+x tk8.5/images/logo.eps
+x tk8.5/images/logo100.gif
+x tk8.5/images/logo64.gif
+x tk8.5/images/logoLarge.gif
+x tk8.5/images/logoMed.gif
+x tk8.5/images/pwrdLogo.eps
+x tk8.5/images/pwrdLogo100.gif
+x tk8.5/images/pwrdLogo150.gif
+x tk8.5/images/pwrdLogo175.gif
+x tk8.5/images/pwrdLogo200.gif
+x tk8.5/images/pwrdLogo75.gif
+x tk8.5/images/README
+x tk8.5/images/tai-ku.gif
+Python installed, please wait for the rest of MGLTools to be installed
+Running /Users/shivanshsahni/Downloads/mgltools_1.5.7_MacOS-X/bin/python Tools/install.py  
+./install.sh: line 97: 70783 Killed: 9               $PYTHON Tools/install.py $pythonargs
+(base) shivanshsahni@Mac mgltools_1.5.7_MacOS-X % ls /Applications
+Adobe Acrobat DC			GlobalProtect.app			Microsoft PowerPoint.app		SchrodingerSuites2025-2
+Antigravity.app				Google Chrome.app			Microsoft Teams.app			SchrodingerSuites2025-3
+BAND.app				Grammarly Desktop.app			Microsoft Word.app			Sublime Text.app
+Bluebook.app				Henry Ford Genesys Health Club.app	Numbers.app				Utilities
+ChatGPT Atlas.app			iMovie.app				OBS.app					Vernier Graphical Analysis.app
+ChemDraw.app				Inkscape.app				OneDrive.app				Vernier Spectral Analysis.app
+Chess.app				Keynote.app				OptiMetro.app				Visual Studio Code.app
+Codex.app				KNIME 5.4.4.app				Orchids.app				WhatsApp.app
+ConcordeTSP.app				LockDown Browser.app			Pages.app				Xcode.app
+Cursor.app				Microsoft Defender Shim.app		PyMOL.app				zoom.us.app
+Developer.app				Microsoft Excel.app			Python 3.12				Zotero.app
+FileZilla.app				Microsoft OneNote.app			Python 3.13
+GeForceNOW.app				Microsoft Outlook.app			Safari.app
+(base) shivanshsahni@Mac mgltools_1.5.7_MacOS-X % conda install -c conda-forge -c bioconda meeko autodock-vina -y
+2 channel Terms of Service accepted
+Channels:
+ - conda-forge
+ - bioconda
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - autodock-vina
+
+Current channels:
+
+  - https://conda.anaconda.org/conda-forge
+  - https://conda.anaconda.org/bioconda
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(base) shivanshsahni@Mac mgltools_1.5.7_MacOS-X % cd ~/Downloads 
+(base) shivanshsahni@Mac Downloads % conda install -c conda-forge -c bioconda meeko autodock-vina -y
+2 channel Terms of Service accepted
+Channels:
+ - conda-forge
+ - bioconda
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - autodock-vina
+
+Current channels:
+
+  - https://conda.anaconda.org/conda-forge
+  - https://conda.anaconda.org/bioconda
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(base) shivanshsahni@Mac Downloads % mk_prepare_ligand.py -i ligand.pdb -o ligand.pdbqt
+zsh: command not found: mk_prepare_ligand.py
+(base) shivanshsahni@Mac Downloads % obabel -:"COc1ccccc1CNC(=O)Cn1c(CCC(=O)O)nc2c(F)cccc2c1=O" -O ligand.pdb --gen3d  
+1 molecule converted
+(base) shivanshsahni@Mac Downloads % obabel ligand.pdb -O ligand_min.pdb --minimize --ff MMFF94
+1 molecule converted
+(base) shivanshsahni@Mac Downloads % conda install -c conda-forge -c bioconda meeko autodock-vina -y
+2 channel Terms of Service accepted
+Channels:
+ - conda-forge
+ - bioconda
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - autodock-vina
+
+Current channels:
+
+  - https://conda.anaconda.org/conda-forge
+  - https://conda.anaconda.org/bioconda
+  - defaults
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(base) shivanshsahni@Mac Downloads % mk_prepare_ligand.py -i ligand_min.pdb -o ligand.pdbqt
+zsh: command not found: mk_prepare_ligand.py
+(base) shivanshsahni@Mac Downloads % conda create -n docking python=3.10 -y
+conda activate docking
+2 channel Terms of Service accepted
+Channels:
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /opt/homebrew/Caskroom/miniconda/base/envs/docking
+
+  added / updated specs:
+    - python=3.10
+
+
+The following NEW packages will be INSTALLED:
+
+  bzip2              pkgs/main/osx-arm64::bzip2-1.0.8-h80987f9_6 
+  ca-certificates    pkgs/main/osx-arm64::ca-certificates-2026.3.19-hca03da5_0 
+  libcxx             pkgs/main/osx-arm64::libcxx-21.1.8-hb4ce287_0 
+  libexpat           pkgs/main/osx-arm64::libexpat-2.7.5-h50f4ffc_0 
+  libffi             pkgs/main/osx-arm64::libffi-3.4.4-hca03da5_1 
+  libzlib            pkgs/main/osx-arm64::libzlib-1.3.1-h5f15de7_0 
+  ncurses            pkgs/main/osx-arm64::ncurses-6.5-hee39554_0 
+  openssl            pkgs/main/osx-arm64::openssl-3.5.5-ha0b305a_0 
+  packaging          pkgs/main/osx-arm64::packaging-26.0-py310hca03da5_0 
+  pip                pkgs/main/noarch::pip-26.0.1-pyhc872135_1 
+  python             pkgs/main/osx-arm64::python-3.10.20-h4f1bc5c_0 
+  readline           pkgs/main/osx-arm64::readline-8.3-h0b18652_0 
+  setuptools         pkgs/main/osx-arm64::setuptools-82.0.1-py310hca03da5_0 
+  sqlite             pkgs/main/osx-arm64::sqlite-3.51.2-h67002bf_0 
+  tk                 pkgs/main/osx-arm64::tk-8.6.15-hcd8a7d5_0 
+  tzdata             pkgs/main/noarch::tzdata-2026a-he532380_0 
+  wheel              pkgs/main/osx-arm64::wheel-0.46.3-py310hca03da5_0 
+  xz                 pkgs/main/osx-arm64::xz-5.8.2-h8bbcb1d_0 
+  zlib               pkgs/main/osx-arm64::zlib-1.3.1-h5f15de7_0 
+
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate docking
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(docking) shivanshsahni@Mac Downloads % conda install -c conda-forge -c bioconda meeko -y
+2 channel Terms of Service accepted
+Channels:
+ - conda-forge
+ - bioconda
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /opt/homebrew/Caskroom/miniconda/base/envs/docking
+
+  added / updated specs:
+    - meeko
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    numpy-1.26.4               |  py310hd45542a_0         5.2 MB  conda-forge
+    prody-2.4.1                |     pyh5e1b82b_2        13.8 MB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        19.0 MB
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      conda-forge/osx-arm64::_openmp_mutex-4.5-7_kmp_llvm 
+  backports.zstd     conda-forge/osx-arm64::backports.zstd-1.3.0-py310h2d60bed_0 
+  biopython          conda-forge/osx-arm64::biopython-1.87-py310h72544b6_0 
+  brotli             conda-forge/osx-arm64::brotli-1.2.0-h7d5ae5b_1 
+  brotli-bin         conda-forge/osx-arm64::brotli-bin-1.2.0-hc919400_1 
+  brotli-python      conda-forge/osx-arm64::brotli-python-1.2.0-py310h6123dab_1 
+  cairo              conda-forge/osx-arm64::cairo-1.18.4-he0f2337_1 
+  certifi            conda-forge/noarch::certifi-2026.2.25-pyhd8ed1ab_0 
+  charset-normalizer conda-forge/noarch::charset-normalizer-3.4.6-pyhd8ed1ab_0 
+  contourpy          conda-forge/osx-arm64::contourpy-1.3.2-py310h7f4e7e6_0 
+  cycler             conda-forge/noarch::cycler-0.12.1-pyhcf101f3_2 
+  cyrus-sasl         conda-forge/osx-arm64::cyrus-sasl-2.1.28-hb961e35_1 
+  eigen-abi          conda-forge/osx-arm64::eigen-abi-3.4.0.100-h485a483_2 
+  font-ttf-dejavu-s~ conda-forge/noarch::font-ttf-dejavu-sans-mono-2.37-hab24e00_0 
+  font-ttf-inconsol~ conda-forge/noarch::font-ttf-inconsolata-3.000-h77eed37_0 
+  font-ttf-source-c~ conda-forge/noarch::font-ttf-source-code-pro-2.038-h77eed37_0 
+  font-ttf-ubuntu    conda-forge/noarch::font-ttf-ubuntu-0.83-h77eed37_3 
+  fontconfig         conda-forge/osx-arm64::fontconfig-2.17.1-h2b252f5_0 
+  fonts-conda-ecosy~ conda-forge/noarch::fonts-conda-ecosystem-1-0 
+  fonts-conda-forge  conda-forge/noarch::fonts-conda-forge-1-hc364b38_1 
+  fonttools          conda-forge/osx-arm64::fonttools-4.62.0-py310hb46c203_0 
+  freetype           conda-forge/osx-arm64::freetype-2.14.2-hce30654_0 
+  freetype-py        conda-forge/noarch::freetype-py-2.3.0-pyhd8ed1ab_0 
+  gemmi              conda-forge/osx-arm64::gemmi-0.7.5-py310haafdc58_0 
+  gettext            conda-forge/osx-arm64::gettext-0.25.1-h3dcc1bd_0 
+  gettext-tools      conda-forge/osx-arm64::gettext-tools-0.25.1-h493aca8_0 
+  greenlet           conda-forge/osx-arm64::greenlet-3.3.2-py310h19b6747_0 
+  h2                 conda-forge/noarch::h2-4.3.0-pyhcf101f3_0 
+  hpack              conda-forge/noarch::hpack-4.1.0-pyhd8ed1ab_0 
+  hyperframe         conda-forge/noarch::hyperframe-6.1.0-pyhd8ed1ab_0 
+  icu                conda-forge/osx-arm64::icu-78.3-hef89b57_0 
+  idna               conda-forge/noarch::idna-3.11-pyhd8ed1ab_0 
+  kiwisolver         conda-forge/osx-arm64::kiwisolver-1.5.0-py310h34990b0_0 
+  krb5               conda-forge/osx-arm64::krb5-1.22.2-h385eeb1_0 
+  lcms2              conda-forge/osx-arm64::lcms2-2.18-hdfa7624_0 
+  lerc               conda-forge/osx-arm64::lerc-4.1.0-h1eee2c3_0 
+  libasprintf        conda-forge/osx-arm64::libasprintf-0.25.1-h493aca8_0 
+  libasprintf-devel  conda-forge/osx-arm64::libasprintf-devel-0.25.1-h493aca8_0 
+  libblas            conda-forge/osx-arm64::libblas-3.11.0-6_h51639a9_openblas 
+  libboost           conda-forge/osx-arm64::libboost-1.86.0-h0419b56_5 
+  libboost-python    conda-forge/osx-arm64::libboost-python-1.86.0-py310h247f08e_5 
+  libbrotlicommon    conda-forge/osx-arm64::libbrotlicommon-1.2.0-hc919400_1 
+  libbrotlidec       conda-forge/osx-arm64::libbrotlidec-1.2.0-hc919400_1 
+  libbrotlienc       conda-forge/osx-arm64::libbrotlienc-1.2.0-hc919400_1 
+  libcblas           conda-forge/osx-arm64::libcblas-3.11.0-6_hb0561ab_openblas 
+  libdeflate         conda-forge/osx-arm64::libdeflate-1.25-hc11a715_0 
+  libedit            conda-forge/osx-arm64::libedit-3.1.20250104-pl5321hafb1f1b_0 
+  libfreetype        conda-forge/osx-arm64::libfreetype-2.14.2-hce30654_0 
+  libfreetype6       conda-forge/osx-arm64::libfreetype6-2.14.2-hdfa99f5_0 
+  libgcc             conda-forge/osx-arm64::libgcc-15.2.0-hcbb3090_18 
+  libgettextpo       conda-forge/osx-arm64::libgettextpo-0.25.1-h493aca8_0 
+  libgettextpo-devel conda-forge/osx-arm64::libgettextpo-devel-0.25.1-h493aca8_0 
+  libgfortran        conda-forge/osx-arm64::libgfortran-15.2.0-h07b0088_18 
+  libgfortran5       conda-forge/osx-arm64::libgfortran5-15.2.0-hdae7583_18 
+  libglib            pkgs/main/osx-arm64::libglib-2.86.3-hcacd345_0 
+  libiconv           conda-forge/osx-arm64::libiconv-1.18-h23cfdf5_2 
+  libintl            conda-forge/osx-arm64::libintl-0.25.1-h493aca8_0 
+  libintl-devel      conda-forge/osx-arm64::libintl-devel-0.25.1-h493aca8_0 
+  libjpeg-turbo      conda-forge/osx-arm64::libjpeg-turbo-3.1.2-hc919400_0 
+  liblapack          conda-forge/osx-arm64::liblapack-3.11.0-6_hd9741b5_openblas 
+  liblzma            conda-forge/osx-arm64::liblzma-5.8.2-h8088a28_0 
+  libntlm            conda-forge/osx-arm64::libntlm-1.8-h5505292_0 
+  libopenblas        conda-forge/osx-arm64::libopenblas-0.3.32-openmp_he657e61_0 
+  libpng             conda-forge/osx-arm64::libpng-1.6.55-h132b30e_0 
+  libpq              conda-forge/osx-arm64::libpq-18.3-hd341ff2_0 
+  librdkit           conda-forge/osx-arm64::librdkit-2025.09.6-h5803ea0_1 
+  libsqlite          conda-forge/osx-arm64::libsqlite-3.52.0-h1ae2325_0 
+  libtiff            conda-forge/osx-arm64::libtiff-4.7.1-h4030677_1 
+  libwebp-base       conda-forge/osx-arm64::libwebp-base-1.6.0-h07db88b_0 
+  libxcb             conda-forge/osx-arm64::libxcb-1.17.0-hdb1d25a_0 
+  llvm-openmp        conda-forge/osx-arm64::llvm-openmp-22.1.2-hc7d1edf_0 
+  matplotlib-base    conda-forge/osx-arm64::matplotlib-base-3.10.8-py310h0181960_0 
+  meeko              conda-forge/noarch::meeko-0.7.1-pyhd8ed1ab_0 
+  munkres            conda-forge/noarch::munkres-1.1.4-pyhd8ed1ab_1 
+  numpy              conda-forge/osx-arm64::numpy-1.26.4-py310hd45542a_0 
+  openjpeg           conda-forge/osx-arm64::openjpeg-2.5.4-hd9e9057_0 
+  openldap           conda-forge/osx-arm64::openldap-2.6.10-hf7f56bc_1 
+  pandas             conda-forge/osx-arm64::pandas-2.3.3-py310h25f4b65_1 
+  pcre2              conda-forge/osx-arm64::pcre2-10.46-h7125dd6_0 
+  pillow             conda-forge/osx-arm64::pillow-12.1.1-py310hc037f36_0 
+  pixman             conda-forge/osx-arm64::pixman-0.46.4-h81086ad_1 
+  prody              conda-forge/noarch::prody-2.4.1-pyh5e1b82b_2 
+  pthread-stubs      conda-forge/osx-arm64::pthread-stubs-0.4-hd74edd7_1002 
+  pycairo            conda-forge/osx-arm64::pycairo-1.29.0-py310h6464c50_1 
+  pyparsing          conda-forge/noarch::pyparsing-3.1.1-pyhd8ed1ab_0 
+  pysocks            conda-forge/noarch::pysocks-1.7.1-pyha55dd90_7 
+  python-dateutil    conda-forge/noarch::python-dateutil-2.9.0.post0-pyhe01879c_2 
+  python-tzdata      conda-forge/noarch::python-tzdata-2025.3-pyhd8ed1ab_0 
+  python_abi         conda-forge/noarch::python_abi-3.10-8_cp310 
+  pytz               conda-forge/noarch::pytz-2026.1.post1-pyhcf101f3_0 
+  qhull              conda-forge/osx-arm64::qhull-2020.2-h420ef59_5 
+  rdkit              conda-forge/osx-arm64::rdkit-2025.09.6-py310hf95d03d_1 
+  reportlab          conda-forge/noarch::reportlab-4.4.10-pyhcf101f3_1 
+  requests           conda-forge/noarch::requests-2.33.1-pyhcf101f3_0 
+  rlpycairo          conda-forge/noarch::rlpycairo-0.4.0-pyh6c17108_0 
+  scipy              conda-forge/osx-arm64::scipy-1.15.2-py310h32ab4ed_0 
+  six                conda-forge/noarch::six-1.17.0-pyhe01879c_1 
+  sqlalchemy         conda-forge/osx-arm64::sqlalchemy-2.0.48-py310haea493c_0 
+  typing-extensions  conda-forge/noarch::typing-extensions-4.15.0-h396c80c_0 
+  typing_extensions  conda-forge/noarch::typing_extensions-4.15.0-pyhcf101f3_0 
+  unicodedata2       conda-forge/osx-arm64::unicodedata2-17.0.1-py310h72544b6_0 
+  urllib3            conda-forge/noarch::urllib3-2.6.3-pyhd8ed1ab_0 
+  xorg-libxau        conda-forge/osx-arm64::xorg-libxau-1.0.12-hc919400_1 
+  xorg-libxdmcp      conda-forge/osx-arm64::xorg-libxdmcp-1.1.5-hc919400_1 
+  zlib-ng            conda-forge/osx-arm64::zlib-ng-2.3.3-hed4e4f5_1 
+  zstd               conda-forge/osx-arm64::zstd-1.5.7-hbf9d68e_6 
+
+The following packages will be UPDATED:
+
+  openssl               pkgs/main::openssl-3.5.5-ha0b305a_0 --> conda-forge::openssl-3.6.1-hd24854e_1 
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  python               pkgs/main::python-3.10.20-h4f1bc5c_0 --> conda-forge::python-3.10.20-h1b19095_0_cpython 
+
+
+
+Downloading and Extracting Packages:
+                                                                                                                                                                      
+Preparing transaction: done                                                                                                                                           
+Verifying transaction: done
+Executing transaction: done
+(docking) shivanshsahni@Mac Downloads % which mk_prepare_ligand.py
+/opt/homebrew/Caskroom/miniconda/base/envs/docking/bin/mk_prepare_ligand.py
+(docking) shivanshsahni@Mac Downloads % mk_prepare_ligand.py -i ligand_min.pdb -o ligand.pdbqt
+Error: Format [pdb] not in supported formats [sdf/mol2/mol]
+(docking) shivanshsahni@Mac Downloads % obabel ligand_min.pdb -O ligand.sdf
+1 molecule converted
+(docking) shivanshsahni@Mac Downloads % mk_prepare_ligand.py -i ligand.sdf -o ligand.pdbqt                                                                           
+Input molecules processed: 1, skipped: 0
+PDBQT files written: 1
+PDBQT files not written due to error: 0
+Input molecules with errors: 0
+(docking) shivanshsahni@Mac Downloads % head ligand.sdf
+ligand_min.pdb
+ OpenBabel04012620113D
+
+ 50 52  0  0  0  0  0  0  0  0999 V2000
+    2.3400   -2.0620    2.5440 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.0150   -0.8090    2.5440 O   0  0  0  0  0  0  0  0  0  0  0  0
+    4.1770   -0.7250    1.8210 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.8180   -1.8130    1.2200 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.9930   -1.6290    0.4860 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.5400   -0.3580    0.3470 C   0  0  0  0  0  0  0  0  0  0  0  0
+(docking) shivanshsahni@Mac Downloads % mk_prepare_receptor.py -i protein_clean.pdb -o protein.pdbqt
+No module named 'pkg_resources'
+option --read_with_prody requires Prody, which is not installed.
+Installable from PyPI (pip install prody) or conda-forge (micromamba install prody)
+(docking) shivanshsahni@Mac Downloads % conda install setuptools -y
+2 channel Terms of Service accepted
+Channels:
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+# All requested packages already installed.
+
+(docking) shivanshsahni@Mac Downloads % mk_prepare_receptor.py -i protein_clean.pdb -o protein.pdbqt
+No module named 'pkg_resources'
+option --read_with_prody requires Prody, which is not installed.
+Installable from PyPI (pip install prody) or conda-forge (micromamba install prody)
+(docking) shivanshsahni@Mac Downloads % pip install setuptools
+Requirement already satisfied: setuptools in /opt/homebrew/Caskroom/miniconda/base/envs/docking/lib/python3.10/site-packages (82.0.1)
+(docking) shivanshsahni@Mac Downloads % python -c "import pkg_resources; print('OK')"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'pkg_resources'
+(docking) shivanshsahni@Mac Downloads % pip install setuptools wheel
+Requirement already satisfied: setuptools in /opt/homebrew/Caskroom/miniconda/base/envs/docking/lib/python3.10/site-packages (82.0.1)
+Requirement already satisfied: wheel in /opt/homebrew/Caskroom/miniconda/base/envs/docking/lib/python3.10/site-packages (0.46.3)
+Requirement already satisfied: packaging>=24.0 in /opt/homebrew/Caskroom/miniconda/base/envs/docking/lib/python3.10/site-packages (from wheel) (26.0)
+(docking) shivanshsahni@Mac Downloads % python -c "import pkg_resources; print('OK')"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'pkg_resources'
+(docking) shivanshsahni@Mac Downloads % conda deactivate
+conda remove -n docking --all -y
+2 channel Terms of Service accepted
+
+Remove all packages in environment /opt/homebrew/Caskroom/miniconda/base/envs/docking:
+
+
+## Package Plan ##
+
+  environment location: /opt/homebrew/Caskroom/miniconda/base/envs/docking
+
+
+The following packages will be REMOVED:
+
+  _openmp_mutex-4.5-7_kmp_llvm
+  backports.zstd-1.3.0-py310h2d60bed_0
+  biopython-1.87-py310h72544b6_0
+  brotli-1.2.0-h7d5ae5b_1
+  brotli-bin-1.2.0-hc919400_1
+  brotli-python-1.2.0-py310h6123dab_1
+  bzip2-1.0.8-h80987f9_6
+  ca-certificates-2026.3.19-hca03da5_0
+  cairo-1.18.4-he0f2337_1
+  certifi-2026.2.25-pyhd8ed1ab_0
+  charset-normalizer-3.4.6-pyhd8ed1ab_0
+  contourpy-1.3.2-py310h7f4e7e6_0
+  cycler-0.12.1-pyhcf101f3_2
+  cyrus-sasl-2.1.28-hb961e35_1
+  eigen-abi-3.4.0.100-h485a483_2
+  font-ttf-dejavu-sans-mono-2.37-hab24e00_0
+  font-ttf-inconsolata-3.000-h77eed37_0
+  font-ttf-source-code-pro-2.038-h77eed37_0
+  font-ttf-ubuntu-0.83-h77eed37_3
+  fontconfig-2.17.1-h2b252f5_0
+  fonts-conda-ecosystem-1-0
+  fonts-conda-forge-1-hc364b38_1
+  fonttools-4.62.0-py310hb46c203_0
+  freetype-2.14.2-hce30654_0
+  freetype-py-2.3.0-pyhd8ed1ab_0
+  gemmi-0.7.5-py310haafdc58_0
+  gettext-0.25.1-h3dcc1bd_0
+  gettext-tools-0.25.1-h493aca8_0
+  greenlet-3.3.2-py310h19b6747_0
+  h2-4.3.0-pyhcf101f3_0
+  hpack-4.1.0-pyhd8ed1ab_0
+  hyperframe-6.1.0-pyhd8ed1ab_0
+  icu-78.3-hef89b57_0
+  idna-3.11-pyhd8ed1ab_0
+  kiwisolver-1.5.0-py310h34990b0_0
+  krb5-1.22.2-h385eeb1_0
+  lcms2-2.18-hdfa7624_0
+  lerc-4.1.0-h1eee2c3_0
+  libasprintf-0.25.1-h493aca8_0
+  libasprintf-devel-0.25.1-h493aca8_0
+  libblas-3.11.0-6_h51639a9_openblas
+  libboost-1.86.0-h0419b56_5
+  libboost-python-1.86.0-py310h247f08e_5
+  libbrotlicommon-1.2.0-hc919400_1
+  libbrotlidec-1.2.0-hc919400_1
+  libbrotlienc-1.2.0-hc919400_1
+  libcblas-3.11.0-6_hb0561ab_openblas
+  libcxx-21.1.8-hb4ce287_0
+  libdeflate-1.25-hc11a715_0
+  libedit-3.1.20250104-pl5321hafb1f1b_0
+  libexpat-2.7.5-h50f4ffc_0
+  libffi-3.4.4-hca03da5_1
+  libfreetype-2.14.2-hce30654_0
+  libfreetype6-2.14.2-hdfa99f5_0
+  libgcc-15.2.0-hcbb3090_18
+  libgettextpo-0.25.1-h493aca8_0
+  libgettextpo-devel-0.25.1-h493aca8_0
+  libgfortran-15.2.0-h07b0088_18
+  libgfortran5-15.2.0-hdae7583_18
+  libglib-2.86.3-hcacd345_0
+  libiconv-1.18-h23cfdf5_2
+  libintl-0.25.1-h493aca8_0
+  libintl-devel-0.25.1-h493aca8_0
+  libjpeg-turbo-3.1.2-hc919400_0
+  liblapack-3.11.0-6_hd9741b5_openblas
+  liblzma-5.8.2-h8088a28_0
+  libntlm-1.8-h5505292_0
+  libopenblas-0.3.32-openmp_he657e61_0
+  libpng-1.6.55-h132b30e_0
+  libpq-18.3-hd341ff2_0
+  librdkit-2025.09.6-h5803ea0_1
+  libsqlite-3.52.0-h1ae2325_0
+  libtiff-4.7.1-h4030677_1
+  libwebp-base-1.6.0-h07db88b_0
+  libxcb-1.17.0-hdb1d25a_0
+  libzlib-1.3.1-h5f15de7_0
+  llvm-openmp-22.1.2-hc7d1edf_0
+  matplotlib-base-3.10.8-py310h0181960_0
+  meeko-0.7.1-pyhd8ed1ab_0
+  munkres-1.1.4-pyhd8ed1ab_1
+  ncurses-6.5-hee39554_0
+  numpy-1.26.4-py310hd45542a_0
+  openjpeg-2.5.4-hd9e9057_0
+  openldap-2.6.10-hf7f56bc_1
+  openssl-3.6.1-hd24854e_1
+  packaging-26.0-py310hca03da5_0
+  pandas-2.3.3-py310h25f4b65_1
+  pcre2-10.46-h7125dd6_0
+  pillow-12.1.1-py310hc037f36_0
+  pip-26.0.1-pyhc872135_1
+  pixman-0.46.4-h81086ad_1
+  prody-2.4.1-pyh5e1b82b_2
+  pthread-stubs-0.4-hd74edd7_1002
+  pycairo-1.29.0-py310h6464c50_1
+  pyparsing-3.1.1-pyhd8ed1ab_0
+  pysocks-1.7.1-pyha55dd90_7
+  python-3.10.20-h1b19095_0_cpython
+  python-dateutil-2.9.0.post0-pyhe01879c_2
+  python-tzdata-2025.3-pyhd8ed1ab_0
+  python_abi-3.10-8_cp310
+  pytz-2026.1.post1-pyhcf101f3_0
+  qhull-2020.2-h420ef59_5
+  rdkit-2025.09.6-py310hf95d03d_1
+  readline-8.3-h0b18652_0
+  reportlab-4.4.10-pyhcf101f3_1
+  requests-2.33.1-pyhcf101f3_0
+  rlpycairo-0.4.0-pyh6c17108_0
+  scipy-1.15.2-py310h32ab4ed_0
+  setuptools-82.0.1-py310hca03da5_0
+  six-1.17.0-pyhe01879c_1
+  sqlalchemy-2.0.48-py310haea493c_0
+  sqlite-3.51.2-h67002bf_0
+  tk-8.6.15-hcd8a7d5_0
+  typing-extensions-4.15.0-h396c80c_0
+  typing_extensions-4.15.0-pyhcf101f3_0
+  tzdata-2026a-he532380_0
+  unicodedata2-17.0.1-py310h72544b6_0
+  urllib3-2.6.3-pyhd8ed1ab_0
+  wheel-0.46.3-py310hca03da5_0
+  xorg-libxau-1.0.12-hc919400_1
+  xorg-libxdmcp-1.1.5-hc919400_1
+  xz-5.8.2-h8bbcb1d_0
+  zlib-1.3.1-h5f15de7_0
+  zlib-ng-2.3.3-hed4e4f5_1
+  zstd-1.5.7-hbf9d68e_6
+
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(base) shivanshsahni@Mac Downloads % conda create -n docking python=3.10 setuptools -y
+conda activate docking
+2 channel Terms of Service accepted
+Channels:
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /opt/homebrew/Caskroom/miniconda/base/envs/docking
+
+  added / updated specs:
+    - python=3.10
+    - setuptools
+
+
+The following NEW packages will be INSTALLED:
+
+  bzip2              pkgs/main/osx-arm64::bzip2-1.0.8-h80987f9_6 
+  ca-certificates    pkgs/main/osx-arm64::ca-certificates-2026.3.19-hca03da5_0 
+  libcxx             pkgs/main/osx-arm64::libcxx-21.1.8-hb4ce287_0 
+  libexpat           pkgs/main/osx-arm64::libexpat-2.7.5-h50f4ffc_0 
+  libffi             pkgs/main/osx-arm64::libffi-3.4.4-hca03da5_1 
+  libzlib            pkgs/main/osx-arm64::libzlib-1.3.1-h5f15de7_0 
+  ncurses            pkgs/main/osx-arm64::ncurses-6.5-hee39554_0 
+  openssl            pkgs/main/osx-arm64::openssl-3.5.5-ha0b305a_0 
+  packaging          pkgs/main/osx-arm64::packaging-26.0-py310hca03da5_0 
+  pip                pkgs/main/noarch::pip-26.0.1-pyhc872135_1 
+  python             pkgs/main/osx-arm64::python-3.10.20-h4f1bc5c_0 
+  readline           pkgs/main/osx-arm64::readline-8.3-h0b18652_0 
+  setuptools         pkgs/main/osx-arm64::setuptools-82.0.1-py310hca03da5_0 
+  sqlite             pkgs/main/osx-arm64::sqlite-3.51.2-h67002bf_0 
+  tk                 pkgs/main/osx-arm64::tk-8.6.15-hcd8a7d5_0 
+  tzdata             pkgs/main/noarch::tzdata-2026a-he532380_0 
+  wheel              pkgs/main/osx-arm64::wheel-0.46.3-py310hca03da5_0 
+  xz                 pkgs/main/osx-arm64::xz-5.8.2-h8bbcb1d_0 
+  zlib               pkgs/main/osx-arm64::zlib-1.3.1-h5f15de7_0 
+
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate docking
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(docking) shivanshsahni@Mac Downloads % conda install -c conda-forge -c bioconda meeko -y
+2 channel Terms of Service accepted
+Channels:
+ - conda-forge
+ - bioconda
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /opt/homebrew/Caskroom/miniconda/base/envs/docking
+
+  added / updated specs:
+    - meeko
+
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      conda-forge/osx-arm64::_openmp_mutex-4.5-7_kmp_llvm 
+  backports.zstd     conda-forge/osx-arm64::backports.zstd-1.3.0-py310h2d60bed_0 
+  biopython          conda-forge/osx-arm64::biopython-1.87-py310h72544b6_0 
+  brotli             conda-forge/osx-arm64::brotli-1.2.0-h7d5ae5b_1 
+  brotli-bin         conda-forge/osx-arm64::brotli-bin-1.2.0-hc919400_1 
+  brotli-python      conda-forge/osx-arm64::brotli-python-1.2.0-py310h6123dab_1 
+  cairo              conda-forge/osx-arm64::cairo-1.18.4-he0f2337_1 
+  certifi            conda-forge/noarch::certifi-2026.2.25-pyhd8ed1ab_0 
+  charset-normalizer conda-forge/noarch::charset-normalizer-3.4.6-pyhd8ed1ab_0 
+  contourpy          conda-forge/osx-arm64::contourpy-1.3.2-py310h7f4e7e6_0 
+  cycler             conda-forge/noarch::cycler-0.12.1-pyhcf101f3_2 
+  cyrus-sasl         conda-forge/osx-arm64::cyrus-sasl-2.1.28-hb961e35_1 
+  eigen-abi          conda-forge/osx-arm64::eigen-abi-3.4.0.100-h485a483_2 
+  font-ttf-dejavu-s~ conda-forge/noarch::font-ttf-dejavu-sans-mono-2.37-hab24e00_0 
+  font-ttf-inconsol~ conda-forge/noarch::font-ttf-inconsolata-3.000-h77eed37_0 
+  font-ttf-source-c~ conda-forge/noarch::font-ttf-source-code-pro-2.038-h77eed37_0 
+  font-ttf-ubuntu    conda-forge/noarch::font-ttf-ubuntu-0.83-h77eed37_3 
+  fontconfig         conda-forge/osx-arm64::fontconfig-2.17.1-h2b252f5_0 
+  fonts-conda-ecosy~ conda-forge/noarch::fonts-conda-ecosystem-1-0 
+  fonts-conda-forge  conda-forge/noarch::fonts-conda-forge-1-hc364b38_1 
+  fonttools          conda-forge/osx-arm64::fonttools-4.62.0-py310hb46c203_0 
+  freetype           conda-forge/osx-arm64::freetype-2.14.2-hce30654_0 
+  freetype-py        conda-forge/noarch::freetype-py-2.3.0-pyhd8ed1ab_0 
+  gemmi              conda-forge/osx-arm64::gemmi-0.7.5-py310haafdc58_0 
+  gettext            conda-forge/osx-arm64::gettext-0.25.1-h3dcc1bd_0 
+  gettext-tools      conda-forge/osx-arm64::gettext-tools-0.25.1-h493aca8_0 
+  greenlet           conda-forge/osx-arm64::greenlet-3.3.2-py310h19b6747_0 
+  h2                 conda-forge/noarch::h2-4.3.0-pyhcf101f3_0 
+  hpack              conda-forge/noarch::hpack-4.1.0-pyhd8ed1ab_0 
+  hyperframe         conda-forge/noarch::hyperframe-6.1.0-pyhd8ed1ab_0 
+  icu                conda-forge/osx-arm64::icu-78.3-hef89b57_0 
+  idna               conda-forge/noarch::idna-3.11-pyhd8ed1ab_0 
+  kiwisolver         conda-forge/osx-arm64::kiwisolver-1.5.0-py310h34990b0_0 
+  krb5               conda-forge/osx-arm64::krb5-1.22.2-h385eeb1_0 
+  lcms2              conda-forge/osx-arm64::lcms2-2.18-hdfa7624_0 
+  lerc               conda-forge/osx-arm64::lerc-4.1.0-h1eee2c3_0 
+  libasprintf        conda-forge/osx-arm64::libasprintf-0.25.1-h493aca8_0 
+  libasprintf-devel  conda-forge/osx-arm64::libasprintf-devel-0.25.1-h493aca8_0 
+  libblas            conda-forge/osx-arm64::libblas-3.11.0-6_h51639a9_openblas 
+  libboost           conda-forge/osx-arm64::libboost-1.86.0-h0419b56_5 
+  libboost-python    conda-forge/osx-arm64::libboost-python-1.86.0-py310h247f08e_5 
+  libbrotlicommon    conda-forge/osx-arm64::libbrotlicommon-1.2.0-hc919400_1 
+  libbrotlidec       conda-forge/osx-arm64::libbrotlidec-1.2.0-hc919400_1 
+  libbrotlienc       conda-forge/osx-arm64::libbrotlienc-1.2.0-hc919400_1 
+  libcblas           conda-forge/osx-arm64::libcblas-3.11.0-6_hb0561ab_openblas 
+  libdeflate         conda-forge/osx-arm64::libdeflate-1.25-hc11a715_0 
+  libedit            conda-forge/osx-arm64::libedit-3.1.20250104-pl5321hafb1f1b_0 
+  libfreetype        conda-forge/osx-arm64::libfreetype-2.14.2-hce30654_0 
+  libfreetype6       conda-forge/osx-arm64::libfreetype6-2.14.2-hdfa99f5_0 
+  libgcc             conda-forge/osx-arm64::libgcc-15.2.0-hcbb3090_18 
+  libgettextpo       conda-forge/osx-arm64::libgettextpo-0.25.1-h493aca8_0 
+  libgettextpo-devel conda-forge/osx-arm64::libgettextpo-devel-0.25.1-h493aca8_0 
+  libgfortran        conda-forge/osx-arm64::libgfortran-15.2.0-h07b0088_18 
+  libgfortran5       conda-forge/osx-arm64::libgfortran5-15.2.0-hdae7583_18 
+  libglib            pkgs/main/osx-arm64::libglib-2.86.3-hcacd345_0 
+  libiconv           conda-forge/osx-arm64::libiconv-1.18-h23cfdf5_2 
+  libintl            conda-forge/osx-arm64::libintl-0.25.1-h493aca8_0 
+  libintl-devel      conda-forge/osx-arm64::libintl-devel-0.25.1-h493aca8_0 
+  libjpeg-turbo      conda-forge/osx-arm64::libjpeg-turbo-3.1.2-hc919400_0 
+  liblapack          conda-forge/osx-arm64::liblapack-3.11.0-6_hd9741b5_openblas 
+  liblzma            conda-forge/osx-arm64::liblzma-5.8.2-h8088a28_0 
+  libntlm            conda-forge/osx-arm64::libntlm-1.8-h5505292_0 
+  libopenblas        conda-forge/osx-arm64::libopenblas-0.3.32-openmp_he657e61_0 
+  libpng             conda-forge/osx-arm64::libpng-1.6.55-h132b30e_0 
+  libpq              conda-forge/osx-arm64::libpq-18.3-hd341ff2_0 
+  librdkit           conda-forge/osx-arm64::librdkit-2025.09.6-h5803ea0_1 
+  libsqlite          conda-forge/osx-arm64::libsqlite-3.52.0-h1ae2325_0 
+  libtiff            conda-forge/osx-arm64::libtiff-4.7.1-h4030677_1 
+  libwebp-base       conda-forge/osx-arm64::libwebp-base-1.6.0-h07db88b_0 
+  libxcb             conda-forge/osx-arm64::libxcb-1.17.0-hdb1d25a_0 
+  llvm-openmp        conda-forge/osx-arm64::llvm-openmp-22.1.2-hc7d1edf_0 
+  matplotlib-base    conda-forge/osx-arm64::matplotlib-base-3.10.8-py310h0181960_0 
+  meeko              conda-forge/noarch::meeko-0.7.1-pyhd8ed1ab_0 
+  munkres            conda-forge/noarch::munkres-1.1.4-pyhd8ed1ab_1 
+  numpy              conda-forge/osx-arm64::numpy-1.26.4-py310hd45542a_0 
+  openjpeg           conda-forge/osx-arm64::openjpeg-2.5.4-hd9e9057_0 
+  openldap           conda-forge/osx-arm64::openldap-2.6.10-hf7f56bc_1 
+  pandas             conda-forge/osx-arm64::pandas-2.3.3-py310h25f4b65_1 
+  pcre2              conda-forge/osx-arm64::pcre2-10.46-h7125dd6_0 
+  pillow             conda-forge/osx-arm64::pillow-12.1.1-py310hc037f36_0 
+  pixman             conda-forge/osx-arm64::pixman-0.46.4-h81086ad_1 
+  prody              conda-forge/noarch::prody-2.4.1-pyh5e1b82b_2 
+  pthread-stubs      conda-forge/osx-arm64::pthread-stubs-0.4-hd74edd7_1002 
+  pycairo            conda-forge/osx-arm64::pycairo-1.29.0-py310h6464c50_1 
+  pyparsing          conda-forge/noarch::pyparsing-3.1.1-pyhd8ed1ab_0 
+  pysocks            conda-forge/noarch::pysocks-1.7.1-pyha55dd90_7 
+  python-dateutil    conda-forge/noarch::python-dateutil-2.9.0.post0-pyhe01879c_2 
+  python-tzdata      conda-forge/noarch::python-tzdata-2025.3-pyhd8ed1ab_0 
+  python_abi         conda-forge/noarch::python_abi-3.10-8_cp310 
+  pytz               conda-forge/noarch::pytz-2026.1.post1-pyhcf101f3_0 
+  qhull              conda-forge/osx-arm64::qhull-2020.2-h420ef59_5 
+  rdkit              conda-forge/osx-arm64::rdkit-2025.09.6-py310hf95d03d_1 
+  reportlab          conda-forge/noarch::reportlab-4.4.10-pyhcf101f3_1 
+  requests           conda-forge/noarch::requests-2.33.1-pyhcf101f3_0 
+  rlpycairo          conda-forge/noarch::rlpycairo-0.4.0-pyh6c17108_0 
+  scipy              conda-forge/osx-arm64::scipy-1.15.2-py310h32ab4ed_0 
+  six                conda-forge/noarch::six-1.17.0-pyhe01879c_1 
+  sqlalchemy         conda-forge/osx-arm64::sqlalchemy-2.0.48-py310haea493c_0 
+  typing-extensions  conda-forge/noarch::typing-extensions-4.15.0-h396c80c_0 
+  typing_extensions  conda-forge/noarch::typing_extensions-4.15.0-pyhcf101f3_0 
+  unicodedata2       conda-forge/osx-arm64::unicodedata2-17.0.1-py310h72544b6_0 
+  urllib3            conda-forge/noarch::urllib3-2.6.3-pyhd8ed1ab_0 
+  xorg-libxau        conda-forge/osx-arm64::xorg-libxau-1.0.12-hc919400_1 
+  xorg-libxdmcp      conda-forge/osx-arm64::xorg-libxdmcp-1.1.5-hc919400_1 
+  zlib-ng            conda-forge/osx-arm64::zlib-ng-2.3.3-hed4e4f5_1 
+  zstd               conda-forge/osx-arm64::zstd-1.5.7-hbf9d68e_6 
+
+The following packages will be UPDATED:
+
+  openssl               pkgs/main::openssl-3.5.5-ha0b305a_0 --> conda-forge::openssl-3.6.1-hd24854e_1 
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  python               pkgs/main::python-3.10.20-h4f1bc5c_0 --> conda-forge::python-3.10.20-h1b19095_0_cpython 
+
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+(docking) shivanshsahni@Mac Downloads % python -c "import pkg_resources; print('OK')"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'pkg_resources'
+(docking) shivanshsahni@Mac Downloads % obabel protein_clean.pdb -O protein.pdbqt -xr
+==============================
+*** Open Babel Warning  in PerceiveBondOrders
+  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is protein_clean.pdb)
+
+1 molecule converted
+(docking) shivanshsahni@Mac Downloads % head protein.pdbqt
+REMARK  Name = protein_clean.pdb
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ATOM      1  N   MET A   1     -99.192 -76.643 -82.244  0.00  0.00    +0.000 NA
+ATOM      2  CA  MET A   1     -98.816 -75.551 -83.190  0.00  0.00    +0.000 C 
+ATOM      3  C   MET A   1     -97.870 -74.532 -82.517  0.00  0.00    +0.000 C 
+ATOM      4  O   MET A   1     -98.318 -73.550 -81.919  0.00  0.00    +0.000 OA
+ATOM      5  CB  MET A   1    -100.086 -74.890 -83.755  0.00  0.00    +0.000 C 
+ATOM      6  CG  MET A   1     -99.836 -73.800 -84.805  0.00  0.00    +0.000 C 
+ATOM      7  SD  MET A   1     -99.127 -74.365 -86.375  0.00  0.00    +0.000 S 
+(docking) shivanshsahni@Mac Downloads % vina --receptor protein.pdbqt --ligand ligand.pdbqt \
+     --center_x X --center_y Y --center_z Z \
+     --size_x 25 --size_y 25 --size_z 25 \
+     --out out.pdbqt
+zsh: command not found: vina
+(docking) shivanshsahni@Mac Downloads % vina --config config.txt --out out.pdbqt --log log.txt
+zsh: command not found: vina
+(docking) shivanshsahni@Mac Downloads % brew install autodock-vina
+✔︎ JSON API cask.jws.json                                                                                                                   Downloaded   15.4MB/ 15.4MB
+✔︎ JSON API formula.jws.json                                                                                                                Downloaded   32.0MB/ 32.0MB
+Warning: No available formula with the name "autodock-vina". Did you mean autoconf?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+autoconf
+
+To install autoconf, run:
+  brew install autoconf
+
+==> Casks
+autodesk-fusion
+
+To install autodesk-fusion, run:
+  brew install --cask autodesk-fusion
+(docking) shivanshsahni@Mac Downloads % vina --help
+zsh: command not found: vina
+(docking) shivanshsahni@Mac Downloads % /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+==> Checking for `sudo` access (which may request your password)...
+Password:
+==> This script will install:
+/opt/homebrew/bin/brew
+/opt/homebrew/share/doc/homebrew
+/opt/homebrew/share/man/man1/brew.1
+/opt/homebrew/share/zsh/site-functions/_brew
+/opt/homebrew/etc/bash_completion.d/brew
+/opt/homebrew
+/etc/paths.d/homebrew
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /usr/sbin/chown -R shivanshsahni:admin /opt/homebrew
+
+==> Downloading and installing Homebrew...
+remote: Enumerating objects: 1191, done.
+remote: Counting objects: 100% (910/910), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 1191 (delta 904), reused 904 (delta 904), pack-reused 281 (from 2)
+==> /usr/bin/sudo /bin/mkdir -p /etc/paths.d
+==> /usr/bin/sudo tee /etc/paths.d/homebrew
+/opt/homebrew/bin
+==> /usr/bin/sudo /usr/sbin/chown root:wheel /etc/paths.d/homebrew
+==> /usr/bin/sudo /bin/chmod a+r /etc/paths.d/homebrew
+==> Updating Homebrew...
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+
+(docking) shivanshsahni@Mac Downloads % 
+(docking) shivanshsahni@Mac Downloads % brew install autodock-vina
+Warning: No available formula with the name "autodock-vina". Did you mean autoconf?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+autoconf
+
+To install autoconf, run:
+  brew install autoconf
+
+==> Casks
+autodesk-fusion
+
+To install autodesk-fusion, run:
+  brew install --cask autodesk-fusion
+(docking) shivanshsahni@Mac Downloads % vina --help
+zsh: command not found: vina
+(docking) shivanshsahni@Mac Downloads % mv ~/Downloads/vina /usr/local/bin/
+chmod +x /usr/local/bin/vina
+vina --help
+mv: rename /Users/shivanshsahni/Downloads/vina to /usr/local/bin/vina: No such file or directory
+chmod: /usr/local/bin/vina: No such file or directory
+zsh: command not found: vina
+(docking) shivanshsahni@Mac Downloads % mv ~/Downloads/vina /usr/local/bin/
+chmod +x /usr/local/bin/vina
+vina --help
+mv: rename /Users/shivanshsahni/Downloads/vina to /usr/local/bin/vina: No such file or directory
+chmod: /usr/local/bin/vina: No such file or directory
+zsh: command not found: vina
+(docking) shivanshsahni@Mac Downloads % cd ~/Downloads
+(docking) shivanshsahni@Mac Downloads % cd autodock_vina_1_1_2_mac_catalina_64bitcd autodock_vina_1_1_2_mac_catalina_64bitcd autodock_vina_1_1_2_mac_catalina_64bitcd autodock_vina_1_1_2_mac_catalina_64bitcd autodock_vina_1_1_2_mac_catalina_64bit
+cd: too many arguments
+(docking) shivanshsahni@Mac Downloads % cd autodock_vina_1_1_2_mac_catalina_64bit
+(docking) shivanshsahni@Mac autodock_vina_1_1_2_mac_catalina_64bit % ls
+bin	LICENSE
+(docking) shivanshsahni@Mac autodock_vina_1_1_2_mac_catalina_64bit % cd bin
+(docking) shivanshsahni@Mac bin % ls
+vina		vina_split
+(docking) shivanshsahni@Mac bin % chmod +x vina
+(docking) shivanshsahni@Mac bin % mv vina /opt/homebrew/bin/
+(docking) shivanshsahni@Mac bin % cd ~
+(docking) shivanshsahni@Mac ~ % vina --help
+zsh: killed     vina --help
+(docking) shivanshsahni@Mac ~ % vina --help
+
+Input:
+  --receptor arg             rigid part of the receptor (PDBQT)
+  --flex arg                 flexible side chains, if any (PDBQT)
+  --ligand arg               ligand (PDBQT)
+
+Search space (required):
+  --center_x arg             X coordinate of the center
+  --center_y arg             Y coordinate of the center
+  --center_z arg             Z coordinate of the center
+  --size_x arg               size in the X dimension (Angstroms)
+  --size_y arg               size in the Y dimension (Angstroms)
+  --size_z arg               size in the Z dimension (Angstroms)
+
+Output (optional):
+  --out arg                  output models (PDBQT), the default is chosen based
+                             on the ligand file name
+  --log arg                  optionally, write log file
+
+Misc (optional):
+  --cpu arg                  the number of CPUs to use (the default is to try 
+                             to detect the number of CPUs or, failing that, use
+                             1)
+  --seed arg                 explicit random seed
+  --exhaustiveness arg (=8)  exhaustiveness of the global search (roughly 
+                             proportional to time): 1+
+  --num_modes arg (=9)       maximum number of binding modes to generate
+  --energy_range arg (=3)    maximum energy difference between the best binding
+                             mode and the worst one displayed (kcal/mol)
+
+Configuration file (optional):
+  --config arg               the above options can be put here
+
+Information (optional):
+  --help                     display usage summary
+  --help_advanced            display usage summary with advanced options
+  --version                  display program version
+
+(docking) shivanshsahni@Mac ~ % cd Downloads 
+(docking) shivanshsahni@Mac Downloads % vina --config config.txt --out out.pdbqt --log log.txt
+#################################################################
+# If you used AutoDock Vina in your work, please cite:          #
+#                                                               #
+# O. Trott, A. J. Olson,                                        #
+# AutoDock Vina: improving the speed and accuracy of docking    #
+# with a new scoring function, efficient optimization and       #
+# multithreading, Journal of Computational Chemistry 31 (2010)  #
+# 455-461                                                       #
+#                                                               #
+# DOI 10.1002/jcc.21334                                         #
+#                                                               #
+# Please see http://vina.scripps.edu for more information.      #
+#################################################################
+
+Detected 8 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -343471842
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.1      0.000      0.000
+   2         -5.9      2.385      3.554
+   3         -5.8      2.593      6.501
+   4         -5.8      2.610      4.820
+   5         -5.7      2.601      6.921
+   6         -5.6      2.844      7.041
+   7         -5.6      2.613      6.357
+   8         -5.6      1.994      4.545
+   9         -5.6     25.438     27.740
+  10         -5.5      2.473      6.650
+Writing output ... done.
+(docking) shivanshsahni@Mac Downloads % 

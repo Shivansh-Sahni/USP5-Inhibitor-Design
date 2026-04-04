@@ -1,0 +1,12 @@
+receptor = 3IHP.pdbqt
+
+center_x = -76.211
+center_y = -26.994
+center_z = -24.604
+
+size_x = 25
+size_y = 25
+size_z = 25
+
+exhaustiveness = 16
+num_modes = 10
